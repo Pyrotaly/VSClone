@@ -9,9 +9,11 @@ public class PlayerManagement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private Animator animator;
 
+
     //Direction Management WIP
     private Vector2 facingDirection = Vector2.down; //Temporarily, player will be always facing down in terms of code
     private float facingDirectionLength = 0.75f;
+    private Vector2 aim;
 
     [Header("Interaction")]
     [SerializeField] private LayerMask layer;
@@ -90,8 +92,8 @@ public class PlayerManagement : MonoBehaviour
         //    }
         //}
     }
-
     #region InputManager 
+
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -142,6 +144,11 @@ public class PlayerManagement : MonoBehaviour
                 interactHit.collider.GetComponent<IInteractable>().OnInteract();
             }
         }
+    }
+
+    public void AimInput(InputAction.CallbackContext context)
+    {
+        aim = context.ReadValue<Vector2>();
     }
     #endregion
 }
