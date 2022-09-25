@@ -16,6 +16,8 @@ public class MouseManager : MonoBehaviour
     public Camera mainCam;
     private Vector3 worldPos;
 
+    private Rigidbody2D rb;
+
     Vector3 testPos;
 
     [SerializeField] private float zPosition;
@@ -28,6 +30,11 @@ public class MouseManager : MonoBehaviour
 
     //GunManager
 
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
         worldPos = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
@@ -36,7 +43,14 @@ public class MouseManager : MonoBehaviour
 
         //TODO : Only for base building
         //transform.position = new Vector3(worldPos.x, worldPos.y, zPosition);          //Exact mouse position, used for changing cursor icon
-        HandleRotation();
+    }
+
+    private void FixedUpdate()
+    {
+        Vector2 lookDir = worldPos - transform.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     public void OnRightClickInput(InputAction.CallbackContext context)
@@ -56,47 +70,9 @@ public class MouseManager : MonoBehaviour
     }
 
 
-
     //Checks player device some how???
     public void OnDeviceChange(PlayerInput pi)
     {
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
     }
-
-    //TODO : I think HandleRotation and LookAt involve 3d looking which is not needed perhaps
-    private void HandleRotation()
-    {
-        if (isGamepad)
-        {
-            if (Mathf.Abs(aim.x) > controllerDeadzone || Mathf.Abs(aim.y) > controllerDeadzone)
-            {
-                Vector3 playerDirection = Vector3.right * aim.x + Vector3.forward * aim.y;
-                if (playerDirection.sqrMagnitude > 0.0f)
-                {
-                    Quaternion newrotation = Quaternion.LookRotation(playerDirection, Vector3.up);
-                    transform.rotation = Quaternion.RotateTowards(transform.rotation, newrotation, rotateSmoothing * Time.deltaTime);
-                }
-            }
-        }
-        else
-        {
-            Debug.Log("hi");
-            Ray ray = Camera.main.ScreenPointToRay(aim);
-            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-            float rayDistance;
-
-            if (groundPlane.Raycast(ray, out rayDistance))
-            {
-                Vector3 point = ray.GetPoint(rayDistance);
-                LookAt(point);
-            }
-        }
-    }
-
-    private void LookAt(Vector3 lookPoint)
-    {
-        Vector3 heightCorrectPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);
-        transform.LookAt(heightCorrectPoint);
-    }
-
 }
