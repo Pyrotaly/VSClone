@@ -22,7 +22,7 @@ public class MouseManager : MonoBehaviour
 
     [SerializeField] private float zPosition;
 
-    public Action OnMouseHover, OnMouseDown, OnMouseUp;
+    public Action OnMouseHover, OnMouseRight, OnMouseLeft, OnR;
 
     //BaseBuildingParameters
     public PlacedObjectTypeSO placeObjectTypeSO;
@@ -55,18 +55,19 @@ public class MouseManager : MonoBehaviour
 
     public void OnRightClickInput(InputAction.CallbackContext context)
     {
-
+        OnMouseRight?.Invoke();
     }
 
     public void OnLeftClickInput(InputAction.CallbackContext context)
     {
-
+        OnMouseLeft?.Invoke();
     }
 
-    //While not a mouse button, having base building rotation applied here is good          //Maybe only for base building action map
-    public void OnRotateInput(InputAction.CallbackContext context)   //This could be the key R
+    // Rotate button or reload button
+    public void OnRInput(InputAction.CallbackContext context)   //This could be the key R
     {
         dir = PlacedObjectTypeSO.GetNextDir(dir);
+        OnR();
     }
 
 

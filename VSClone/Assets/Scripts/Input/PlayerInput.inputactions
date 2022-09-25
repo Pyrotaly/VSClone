@@ -234,33 +234,6 @@
             ]
         },
         {
-            "name": "BaseBuilding?",
-            "id": "b8be20e2-00c3-4012-aa8a-2fc7f4a34cd0",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "1f53f483-dfdb-42ae-a9cf-a03659ace454",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "743a86b1-66d9-4e44-83fc-56de0abd84fe",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
             "name": "UI",
             "id": "906853dd-c977-4813-8091-472ce0ad1cc3",
             "actions": [

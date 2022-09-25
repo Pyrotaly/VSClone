@@ -31,23 +31,23 @@ public class GridManager : MonoBehaviour
     //Do i need to make another one for the shop?  Will the shop and the personal room be in the same scene?
     private void GenerateGrid()
     {
-        tiles = new Dictionary<Vector2, BaseBuildTile>();
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                BaseBuildTile spawnedTile = Instantiate(tilePrefab, new Vector3(x, y), Quaternion.identity);
-                spawnedTile.x = x;
-                spawnedTile.y = y;
-                spawnedTile.name = $"Tile {x} {y}";
-                spawnedTile.transform.SetParent(TileFolder, true);
+    //    tiles = new Dictionary<Vector2, BaseBuildTile>();
+    //    for (int x = 0; x < width; x++)
+    //    {
+    //        for (int y = 0; y < height; y++)
+    //        {
+    //            BaseBuildTile spawnedTile = Instantiate(tilePrefab, new Vector3(x, y), Quaternion.identity);
+    //            spawnedTile.x = x;
+    //            spawnedTile.y = y;
+    //            spawnedTile.name = $"Tile {x} {y}";
+    //            spawnedTile.transform.SetParent(TileFolder, true);
 
-                bool isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);      //Every other tile will have diff color
+    //            bool isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);      //Every other tile will have diff color
 
-                spawnedTile.Init(isOffset);
-                tiles[new Vector2(x, y)] = spawnedTile;
-            }
-        }
+    //            spawnedTile.Init(isOffset);
+    //            tiles[new Vector2(x, y)] = spawnedTile;
+    //        }
+    //    }
     }
 
     public BaseBuildTile GetTileAtPosition(Vector2 pos)
