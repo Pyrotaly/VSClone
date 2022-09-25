@@ -2529,6 +2529,12 @@ MonoBehaviour:
   firePoint: {fileID: 1228854204}
   bulletPrefab: {fileID: 2135746950}
   bulletForce: 20
+  fireRate: 2
+  rapidFire: 1
+  maxAmmo: 1000
+  ammoCostPerShot: 200
+  currentAmmo: 0
+  reloadTime: 1.72
 --- !u!4 &1228854204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1228854204, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}

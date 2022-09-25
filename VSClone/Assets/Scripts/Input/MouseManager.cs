@@ -11,35 +11,29 @@ public class MouseManager : MonoBehaviour
     [SerializeField] private bool isGamepad;
     [SerializeField] private float controllerDeadzone = 0.1f;
     [SerializeField] private float rotateSmoothing = 1000f;
-    private Vector2 aim;
 
+    [Header("Cursor Management")]
     public Camera mainCam;
     private Vector3 worldPos;
-
-    private Rigidbody2D rb;
-
-    Vector3 testPos;
-
     [SerializeField] private float zPosition;
-
-    public Action OnMouseHover, OnMouseRight, OnMouseLeft, OnR;
 
     //BaseBuildingParameters
     public PlacedObjectTypeSO placeObjectTypeSO;
     public PlacedObjectTypeSO.Dir dir = PlacedObjectTypeSO.Dir.Down;
+        
+    public Action OnMouseHover, OnMouseRight, OnMouseLeftDown, OnMouseLeftUp,OnR;
 
-    //GunManager
+    private Coroutine fireCoroutine;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
         worldPos = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
-        //testPos = new Vector2(Mathf.Round(worldPos.x), Mathf.Round(worldPos.y));    //Used for tile selection
+        //new Vector3 = testPos = new Vector2(Mathf.Round(worldPos.x), Mathf.Round(worldPos.y));    //Used for tile selection
 
         //TODO : Only for base building
         //transform.position = new Vector3(worldPos.x, worldPos.y, zPosition);          //Exact mouse position, used for changing cursor icon
@@ -47,12 +41,11 @@ public class MouseManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 lookDir = worldPos - transform.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        //If not in base building then, not sure if base building in game 
+        HandleGunRotation();
     }
 
+    #region InputHandler
     public void OnRightClickInput(InputAction.CallbackContext context)
     {
         OnMouseRight?.Invoke();
@@ -60,7 +53,14 @@ public class MouseManager : MonoBehaviour
 
     public void OnLeftClickInput(InputAction.CallbackContext context)
     {
-        OnMouseLeft?.Invoke();
+        if (context.started)
+        {
+            OnMouseLeftDown?.Invoke();
+        }
+        else if (context.canceled)
+        {
+            OnMouseLeftUp?.Invoke();
+        }
     }
 
     // Rotate button or reload button
@@ -69,11 +69,28 @@ public class MouseManager : MonoBehaviour
         dir = PlacedObjectTypeSO.GetNextDir(dir);
         OnR();
     }
+    #endregion
 
+    private void StartFiring()
+    {
 
-    //Checks player device some how???
+    }
+
+    private void StopFiring()
+    {
+
+    }
+
     public void OnDeviceChange(PlayerInput pi)
     {
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
+    }
+
+    public void HandleGunRotation()
+    {
+        Vector2 lookDir = worldPos - transform.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }
