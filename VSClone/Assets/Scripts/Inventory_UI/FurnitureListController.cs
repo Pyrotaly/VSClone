@@ -6,7 +6,7 @@ public class FurnitureListController : ButtonListControl
 {
     [SerializeField] private MouseManager mouseManager;
 
-    public BaseBuildTile bbt;
+    //public BaseBuildTile bbt;
 
     protected override void TestingPlacingItem(BaseItems itemType)
     {

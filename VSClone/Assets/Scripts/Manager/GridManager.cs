@@ -8,14 +8,14 @@ public class GridManager : MonoBehaviour
     public static GridManager instance;
 
     [SerializeField] private int width, height;        //When upgrading the shop, make this public?
-    [SerializeField] private BaseBuildTile tilePrefab;
+    //[SerializeField] private BaseBuildTile tilePrefab;
     [SerializeField] private Transform cam;
 
     //Add more paremeter of more tiles that will be walls, maybe make some of them occupied
 
     public Transform TileFolder;     //JustToOrganizeTiles
 
-    private Dictionary<Vector2, BaseBuildTile> tiles;
+    //private Dictionary<Vector2, BaseBuildTile> tiles;
 
     private void Awake()
     {
@@ -50,11 +50,11 @@ public class GridManager : MonoBehaviour
     //    }
     }
 
-    public BaseBuildTile GetTileAtPosition(Vector2 pos)
-    {
-        if (tiles.TryGetValue(pos, out BaseBuildTile tile)) return tile;
-        return null;
-    }
+    //public BaseBuildTile GetTileAtPosition(Vector2 pos)
+    //{
+    //    if (tiles.TryGetValue(pos, out BaseBuildTile tile)) return tile;
+    //    return null;
+    //}
 
     public void TurnOffTiles() { TileFolder.gameObject.SetActive(false); }
 
