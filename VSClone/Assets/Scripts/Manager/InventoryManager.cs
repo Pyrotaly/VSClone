@@ -27,11 +27,6 @@ public class InventoryManager : MonoBehaviour
     //Adding item to play list, through stocker or picking up items  //Might need downcasting to organize items
     public void AddItem(BaseItems item, int amount)
     {
-        if (item is FurnitureItem functionItem)
-        {
-            //Add to list
-        }
-
         if (item is PersonalRoomItem prItem)
         {
             //Add to other list

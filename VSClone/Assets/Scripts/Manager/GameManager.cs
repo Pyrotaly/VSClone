@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
             case GameState.PlayerWalk:
                 break;
             case GameState.GenerateGrid:
-                GridManager.instance.TurnOnTiles();
+                //GridManager.instance.TurnOnTiles();
                 break;
             default:
                 break;

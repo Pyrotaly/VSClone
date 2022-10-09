@@ -56,7 +56,5 @@ public class GridManager : MonoBehaviour
     //    return null;
     //}
 
-    public void TurnOffTiles() { TileFolder.gameObject.SetActive(false); }
-
-    public void TurnOnTiles() { TileFolder.gameObject.SetActive(true); }
+ 
 }

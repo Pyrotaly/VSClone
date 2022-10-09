@@ -3,8 +3,13 @@ Goals: Simple AI, Add more Guns
 10/7/2022
 ---------
 Developed schedule to work on game on Friday Night - Weekend if possible
----------
+=========
 10/8/2022
 ---------
 Developing Plan on what to work on
+=========
+10/9/2022
+---------
+Added A*.  When scanning obstacles with A*, make sure to add colliders on obstacles
 
+Added bullet script for ranged enemies, could just reuse code for player bullet

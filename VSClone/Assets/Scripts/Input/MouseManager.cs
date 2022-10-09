@@ -16,10 +16,7 @@ public class MouseManager : MonoBehaviour
     public Camera mainCam;
     private Vector3 worldPos;
     [SerializeField] private float zPosition;
-
-    //BaseBuildingParameters
-    public PlacedObjectTypeSO placeObjectTypeSO;
-    public PlacedObjectTypeSO.Dir dir = PlacedObjectTypeSO.Dir.Down;
+     
         
     public Action OnMouseHover, OnMouseRight, OnMouseLeftDown, OnMouseLeftUp,OnR;
 
@@ -66,7 +63,6 @@ public class MouseManager : MonoBehaviour
     // Rotate button or reload button
     public void OnRInput(InputAction.CallbackContext context)   //This could be the key R
     {
-        dir = PlacedObjectTypeSO.GetNextDir(dir);
         OnR();
     }
     #endregion
