@@ -185,8 +185,6 @@ MonoBehaviour:
   rotateSmoothing: 1000
   mainCam: {fileID: 0}
   zPosition: 0
-  placeObjectTypeSO: {fileID: 0}
-  dir: 0
 --- !u!1 &4524517881571830620
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,10 +195,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2151055113828914338}
   - component: {fileID: 2289909350805921907}
-  - component: {fileID: 4872709359622140365}
   - component: {fileID: 3296424483167706918}
   - component: {fileID: 4524517881487723479}
   - component: {fileID: 1549282711330722510}
+  - component: {fileID: 4872709359622140365}
   - component: {fileID: 4524517881571830611}
   m_Layer: 0
   m_Name: Player
@@ -276,27 +274,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &4872709359622140365
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4524517881571830620}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &3296424483167706918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 4872709359622140365}
   animator: {fileID: 1549282711330722510}
+  Health: 40
   layer:
     serializedVersion: 2
     m_Bits: 64
@@ -525,6 +503,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &4872709359622140365
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4524517881571830620}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &4524517881571830611
 BoxCollider2D:
   m_ObjectHideFlags: 0

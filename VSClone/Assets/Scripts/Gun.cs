@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Gun : MonoBehaviour        //TODO: Need to make gun blue print better
 {
+    [Header("References")]
+    [SerializeField] private Transform firePoint;         //It is gameobjectTransform on player in Hierachy
+    [SerializeField] private GameObject bulletPrefab;
     private MouseManager mouseManager;
-    public Transform firePoint;
-    public GameObject bulletPrefab;
 
-    [SerializeField] private float bulletForce = 20f;      //Speed of bullet
-    [SerializeField] private float fireRate = 2f;
-    [SerializeField] private bool rapidFire;
+    [Header("Bullet Management")]
+    [SerializeField] private float bulletForce = 20f;       //Speed of bullet
+    [SerializeField] private float fireRate = 2f;           //Higher number, faster fire rate
+    [SerializeField] private bool rapidFire;                
+    private float nextAttackTime;
     private WaitForSeconds rapidFireWait;
 
+    [Header("Ammo Management")]
     [SerializeField] private int maxAmmo = 1000;
     [SerializeField] private int ammoCostPerShot;
-    [SerializeField] private int currentAmmo;
+    private int currentAmmo;
 
     [SerializeField] private float reloadTime = 2;
     private WaitForSeconds reloadWait;
@@ -46,12 +50,15 @@ public class Gun : MonoBehaviour
 
     private void StartFiring()
     {
-        fireCoroutine = StartCoroutine(RapidFire());
+        if (Time.time > nextAttackTime)     //Prevent player from spamming attack button
+        {
+            nextAttackTime = Time.time + (1 / fireRate);
+            fireCoroutine = StartCoroutine(RapidFire());
+        }
     }
 
     private void StopFiring()
     {
-        Debug.Log("hey");
         if (fireCoroutine != null)
         {
             StopCoroutine(fireCoroutine);
@@ -65,23 +72,19 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
-        if (CanShoot())
-        {
-            currentAmmo -= ammoCostPerShot;
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        currentAmmo -= ammoCostPerShot;
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
-            rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
 
-            OnGunShot();
-        }
+        OnGunShot();
     }
 
     private void OnGunShot()
     {
-        //Put gun effects herer
+        //Put gun effects hear
     }
-
 
     private IEnumerator RapidFire()
     {
@@ -113,7 +116,7 @@ public class Gun : MonoBehaviour
 
         print("reloading");
         yield return reloadWait;
-        currentAmmo = maxAmmo;          //TODO : This is not right
+        currentAmmo = maxAmmo;          //TODO : Apparently, something here is not right, need to get ammo from reserve, not just full reload like overwatch?
         print("done reloading");
     }
 }

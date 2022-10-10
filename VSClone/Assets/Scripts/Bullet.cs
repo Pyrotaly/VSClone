@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int bulletDamage;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable i))
+        {
+            i.Damage(bulletDamage);
+        }
+
+        Destroy(this.gameObject);
     }
 }

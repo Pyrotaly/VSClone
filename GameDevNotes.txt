@@ -1,4 +1,4 @@
-Goals: Simple AI, Add more Guns
+Goals: Hitting and Health System (no ui), Add more Guns
 
 10/7/2022
 ---------
@@ -10,6 +10,9 @@ Developing Plan on what to work on
 =========
 10/9/2022
 ---------
-Added A*.  When scanning obstacles with A*, make sure to add colliders on obstacles
-
-Added bullet script for ranged enemies, could just reuse code for player bullet
+}Added A*.  When scanning obstacles with A*, make sure to add colliders on obstacles
+}Added bullet script for ranged enemies, could just reuse code for player bullet
+}Might need to review courotines more
+}FINISHED BASIC AI
+}Starting to implement health and damage system
+}Added a PlayerBullet layer to ignore collision with player layer

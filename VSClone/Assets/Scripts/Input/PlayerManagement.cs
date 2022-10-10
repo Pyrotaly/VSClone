@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerManagement : MonoBehaviour
+public class PlayerManagement : MonoBehaviour, IDamageable
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private Animator animator;
 
+    [Header("HealthManagement")]
+    [SerializeField] private int Health = 400;
 
     //Direction Management WIP
     private Vector2 facingDirection = Vector2.down; //Temporarily, player will be always facing down in terms of code
@@ -92,8 +94,18 @@ public class PlayerManagement : MonoBehaviour
         //    }
         //}
     }
-    #region InputManager 
 
+    public void Damage(int damageAmount)
+    {
+        Health -= damageAmount;
+
+        if (Health <= 0)
+        {
+            Debug.Log("Dead");
+        }
+    }
+
+    #region InputManager 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         if (context.started)
