@@ -1,4 +1,6 @@
-Goals: Hitting and Health System (no ui), Add more Guns
+Goals: Make bullet despawn or is there a wall?, Add more Guns, -->>>>>>>>> HARD: Map transitioning and randomization
+
+BUGS: 10/16
 
 10/7/2022
 ---------
@@ -16,3 +18,26 @@ Developing Plan on what to work on
 }FINISHED BASIC AI
 }Starting to implement health and damage system
 }Added a PlayerBullet layer to ignore collision with player layer
+}FINISHED HITTING AND HEALTH SYSTEM FOR PROJECTILES
+}NOTE: All damage will be ints
+========
+10/16/2022
+----------
+}Try to make enemy die (DONE)
+}ENEMY BLUE PRINT
+NO SPEED: Already on AI Path script
+Health, touch damage, particle effects?, animation handler (LATER)
+BUG: Enemy touch damage occurs only once
+========
+10/20/2022
+--------
+}Player Iframes are in place, just need to add in layers for player to ignore
+}NOTE: ENEMY IGNORE ENEMY IN PHYSICS2D LAYER SYSTEM
+}Made player sorting layer, layer 3
+}https://forum.arongranberg.com/t/seeker-partially-phases-through-wall-while-pathfinding/6032/2
+}BUG: Enemy partially goes through wall because A* does not incorporate colliders in math
+}MADE ALMOST ENTER GUNGEON HIT DAMAGE, NEED GAMEFEEL AND CAMERA SHAKE
+========
+10/21/2022
+--------
+GOAL: MAKE MAP

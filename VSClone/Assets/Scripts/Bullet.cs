@@ -10,9 +10,9 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable i))
         {
-            i.Damage(bulletDamage);
+            i.TakeDamage(bulletDamage);
         }
 
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

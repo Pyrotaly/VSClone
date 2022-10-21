@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IDamageable //Only used on things who can be damaged: Health -= damageAmount;
 {
-    void Damage(int damageAmount);
+    void TakeDamage(int damageAmount);
 }

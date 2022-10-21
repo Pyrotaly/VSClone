@@ -15,8 +15,8 @@ TagManager:
   - Interactable
   - Impassible
   - PlayerBullet
-  - 
-  - 
+  - Enemy
+  - EnemyCollides
   - 
   - 
   - 
@@ -45,6 +45,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UITest
+  - name: Player
     uniqueID: 1625907651
     locked: 0

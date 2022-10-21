@@ -2401,7 +2401,8 @@ GameObject:
   - component: {fileID: 513314422}
   - component: {fileID: 513314421}
   - component: {fileID: 513314423}
-  m_Layer: 0
+  - component: {fileID: 513314424}
+  m_Layer: 9
   m_Name: TestEnemyRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2487,12 +2488,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1fe8d0966ca1148843bec28eba1144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 400
+  touchDamage: 20
   target: {fileID: 1577843140}
-  shootRange: 5.69
   enemyBullet: {fileID: 8608580923379373023, guid: 551126bc86382cc4ca6108660dae9f5e, type: 3}
   bulletSpawnPoint: {fileID: 1047733117}
   bulletForce: 2
+  shootRange: 5.69
   attackCooldown: 2
+--- !u!61 &513314424
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513314420}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,7 +2714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1047733117}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2799,7 +2828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+s+JxfLVwIAABIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzqUDlITQW2sI6YHAhHZy8UVIa6xBljz64CvDf+9KtrFDpyfEe293365W/iBC2RKY02ZhBF9qDuR7j4Qz+dJryRc40Z1WG3GBRvMuuMuDiEbNG3VCIz4MYVYX4IxgP9ROBvEAQa9Epk0x5ztItHUW4YxKC0gZ7UK0QuijR07405+GkDOeRpNwuuBpOuhd8chAOTCttBE2skrlFZO0KIEHy634W6MeTqNMYTO1IhhnWkphayfEncvYaUJL67EPFHBBsbNYPuhzELvcBZfd4FWWWXC1JUPPM2FwQFVW8lNXUyuo3Ve+DlT6aGD0FD1VSZf/8P1hpDOji5em7nAQarhcsP0bPTNqXWesXXj22bhXRyr3dCvhPQf1qhdGe8WRdMaHUG9hNGv/3lpLcmD7Fq+s3oG+/P/lhB6usftTIkWxDdTXcQVspI7zjlcPBm/mFxqOi2HrFIgGF38s/Ka77gbVxLMw1iFVd6mCva32JkjJPM4sdONdoo2CCNemS1BUuvMa07j7K7zjOmXvmGca3kpdvOaaJ3AXEuFWPxjcUWt9vF2WzfVxCTZfeSeFgtZ0IF5xTolWqtqw7kyasI03GWWdsJ0X/PNqkcmITh4GlD0+8i2bPo362yfgDDG+pQ/jSTYmcfeEwj6pXFdG6/Hgrak2ucI9az4hvYWhZdx2buhxIS6F7oxcqExvmAFQqyrDzTgYLIKvks+5wAFtwDmh4n2Tj5RIzfbA01uiNHY6PzlD0zZLSkpx0C4gKUniNyMlAb7t8trAQcAxFG+SXcn1L1BLAwQUAAAICAAAmJ/r6RX0JWwAAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0krlRormpQWKymVlKUrKlhZFukkVqSjJQLCUp0dTEPM1EKRaovqSyINUvMTcVoicgsSQjLTMvJTMvXc+9KDPFHWS0UmwtAFBLAQItABQAAAgIAACYn+s+JxfLVwIAABIFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+vpFfQlbAAAAHgAAAAJACQAAAAAAAAAAAAAAKQCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAWwMAAAAA
+    dataString: UEsDBBQAAAgIAACYn+sf/cSRXAIAABUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMziUDLgmht9YQ0kMCE9rJxRchrbEGWfLog49k+O9dyTZ26fSEeO/t7tvVyp9EKFsBc9osjeAvmgP5NiDhTL4MOvIZTnSn1UZ8QKt5F9wVQUSj5o06oREfhzCrS3BGsO9qJ4N4hKBXItemXPAdpNo6i3BOpQWkjHYhWiH0OSAn/BnOQsgZT8k0nD7wNBsNLnhkoByYTtoKW1mt8opJWlbAg+VO/LVVj2dRprCZRhGMMy2lsI0T4s5V7DSllfXYBwq4oNhZLD++e0gQKUDsCheM9uNXeW7BNa4MPc+FwRnVickPXQ+upHZfWztQ6aOH5DHaqpO+/MMPx5HOjS6f27rjUajhCsH2b/TMqHW9yfbhec97nNCRyj3dSngvQL3qpdFecSSd8SHUW0jm3d9ra2kBbN/htdUb0Ff/v5/QwyV2f0qlKLeBupvUwEbqOPJ4+2Dwcn6i4bgbtkmBaHDx28IvuusvUUM8CWMdUk2XKtjbam+ClCzizEI33qXaKIhwY7oCRaU7rzGNu73CG65X9oZ5ouG5NMUbrn0FNyER7vSj0Q211sfrZdlCH1/AFivvpFDQmQ7EK84p1UrVG9afSRu28SanrBe284L/vVpkmtDp/Yiyhwe+ZbPHZLh9BM4Q41t6P5nmExJ3Tyjsk8p1bbQZD96a6pIr3LP2KzJYGlrFbeeGHpfio9S9kQuV6w0zAGpVZ7gaB4NF8GHyBRc4oA04J1S8b/KZEanZHnh2TZTFThcnZ2jWZclIJQ7aBSQjafxsZCTA111eGzgIOIbibbILufwBUEsDBBQAAAgIAACYn+vpFfQlbAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSuVGiualBYrKZWUpSsqWFkW6SRWpKMlAsJSnR1MQ8zUQpFqi+pLIg1S8xNxWiJyCxJCMtMy8lMy9dz70oM8UdZLRSbC0AUEsBAi0AFAAACAgAAJif6x/9xJFcAgAAFQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6+kV9CVsAAAAeAAAAAkAJAAAAAAAAAAAAAAAqQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABgAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -2827,7 +2856,39 @@ MonoBehaviour:
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors:
     - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
@@ -2962,6 +3023,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2289909350805921907, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289909350805921907, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1625907651
+      objectReference: {fileID: 0}
     - target: {fileID: 3296424483167706918, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2973,6 +3042,30 @@ PrefabInstance:
     - target: {fileID: 3296424483167706918, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524517881487723479, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
+      propertyPath: Health
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524517881487723479, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
+      propertyPath: iFrameDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524517881487723479, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
+      propertyPath: numberOfFlashes
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524517881487723479, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
+      propertyPath: layersToIgnore.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524517881487723479, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
+      propertyPath: layersToIgnore.Array.data[0].m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524517881487723479, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
+      propertyPath: layersToIgnore.Array.data[1].m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 4524517881571830611, guid: 2e0f6c604ae5bfc4c8bfb23acce631e1, type: 3}
       propertyPath: m_Enabled
@@ -3213,13 +3306,14 @@ GameObject:
   - component: {fileID: 1951378727}
   - component: {fileID: 1951378730}
   - component: {fileID: 1951378729}
-  m_Layer: 0
+  - component: {fileID: 1951378731}
+  m_Layer: 9
   m_Name: EnemyWalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1951378725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3366,7 +3460,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3396,6 +3490,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 1577843140}
+--- !u!114 &1951378731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951378724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81354d9ab63d084abceab8555f11238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 400
+  touchDamage: 20
 --- !u!1 &1966855613
 GameObject:
   m_ObjectHideFlags: 0

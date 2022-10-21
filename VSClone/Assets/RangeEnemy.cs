@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangeEnemy : MonoBehaviour
+public class RangeEnemy : Enemy
 {
     [SerializeField] private Transform target;
 
-    [SerializeField] private float shootRange = 6;
     [SerializeField] private GameObject enemyBullet;
     [SerializeField] private Transform bulletSpawnPoint;
-    [SerializeField] private float bulletForce = 20f;      
+    [SerializeField] private float bulletForce = 20f;
+    [SerializeField] private float shootRange = 6;
     [SerializeField] private float attackCooldown = 2f;
     private float nextAttackTime;
     private Vector2 directionToPlayer;

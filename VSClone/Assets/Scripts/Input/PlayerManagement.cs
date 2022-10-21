@@ -12,6 +12,12 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     [Header("HealthManagement")]
     [SerializeField] private int Health = 400;
 
+    [Header("IFrames")]
+    [SerializeField] private List<LayerMask> layersToIgnore;
+    [SerializeField] private float iFrameDuration = 2;
+    [SerializeField] private int numberOfFlashes = 3;
+    private SpriteRenderer spriteRenderer;
+
     //Direction Management WIP
     private Vector2 facingDirection = Vector2.down; //Temporarily, player will be always facing down in terms of code
     private float facingDirectionLength = 0.75f;
@@ -47,6 +53,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -95,14 +102,37 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         //}
     }
 
-    public void Damage(int damageAmount)
+    public void TakeDamage(int damageAmount)
     {
         Health -= damageAmount;
 
         if (Health <= 0)
         {
-            Debug.Log("Dead");
+            Debug.Log("Player Dead");
         }
+        else
+        {
+            StartCoroutine(Invunerability());
+        }
+    }
+
+    private IEnumerator Invunerability()
+    {
+        //Ignore collision from enemies 
+        //Physics2D.IgnoreLayerCollision(layersToIgnore[0], layersToIgnore[1], true);
+        Physics2D.IgnoreLayerCollision(3, 9, true);
+
+        for (int i = 0; i < numberOfFlashes; i++)
+        {
+            spriteRenderer.color = new Color(1, 0, 0, 0.5f);
+            yield return new WaitForSeconds(iFrameDuration/(numberOfFlashes*2));
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(iFrameDuration / (numberOfFlashes * 2));
+        }
+
+        //Enable collision from enemies
+        //Physics2D.IgnoreLayerCollision(layersToIgnore[0], layersToIgnore[1], false);
+        Physics2D.IgnoreLayerCollision(3, 9, false);
     }
 
     #region InputManager 
