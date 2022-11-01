@@ -1,4 +1,4 @@
-Goals: Make bullet despawn or is there a wall?, Add more Guns, -->>>>>>>>> HARD: Map transitioning and randomization
+Goals: Make bullet despawn or is there a wall?, Add more Guns, How to make code reusable, Make enemy designs, HARD: Work on Boss AI, HARD(NEEDED??): Map transitioning and randomization, Map Design?
 
 BUGS: 10/16
 
@@ -41,3 +41,47 @@ BUG: Enemy touch damage occurs only once
 10/21/2022
 --------
 GOAL: MAKE MAP
+========
+10/28-29/2022
+--------
+GOAL: Make BOSS AI?
+}Not sure if making randomized map is the good idea.  Might be better to focus on making a simple polished game.
+}Work on like 5 levels.  Hotline Miami style
+}5 Bosses, one is like a flood movement boss like Ori and the Blind Forest but it is reoccuring (blood flood).
+
+Basic Sum of Bosses, more detail below
+FIRST BASIC BOSS: Basic Enemy that is super strong who spawn mini version of it.  Bullet hell basically.  The mini version can be reoccuring enemy
+
+BLOOD FLOOD BOSS: First introduced as a boss to make player work on movement skill.  Will comeback again as another mechanic
+
+CLONE BOSS: Make a boss with similar movements and attacks as player (but more animated and not just a hopping blob).
+}How to make this boss like mimic the player for the first half
+
+DIMENSION WARPING BOSS THING: How to shift game from top down to a 2d.  Bullet hell, nothing else special, maybe just a boss testing all player skill
+
+FINAL BOSS: Like Furi Final Boss (not the spaceship alien thing) where the player just shoots at the monsters organs 
+
+
+
+FIRST BASIC BOSS: Mechanics: Spawn Mini Enemies (maybe only one or two max), shoot lots of bullets like Enter the Gungeon.  Maybe a phase of missile based attacks, final phase of bombs?
+				Killing mini enemies will give player like a 30 second window of no enemy
+
+
+BLOOD FOOD BOSS:
+
+CLONE BOSS: I feel like this boss should be the boss with lazers, swords, axes and other cool weapons in phase 2 and 3 and maybe 4. Needs a cutscene
+	
+DIMENSION WARPING BOSS: Have more cells.  When changing dimension with the animation, remove all mini enemies and then spawn in mini enemies depending on the phase.  
+Maybe add in the Clone Boss but weaker with less damage and less health in the final phase
+
+
+========
+10/28-29/2022
+--------
+GOAL: Work on BOSS AI and make enemy designs
+
+ENEMY TYPES: Walk and die (Vampire survivor), enemy stuck on walls that shoot, enemies that move and shoot, enemies that spawn enemies.  
+			REUSED ENEMIES: The mini enemy in BOSS 1, BOSS 3 weaker version
+
+TOTAL ENEMIES = 6
+
