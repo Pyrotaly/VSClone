@@ -1,5 +1,13 @@
 Goals: Make bullet despawn or is there a wall?, Add more Guns, How to make code reusable, Make enemy designs, HARD: Work on Boss AI, HARD(NEEDED??): Map transitioning and randomization, Map Design?
 
+IMPORTANT NOTE: In Unity I DID THIS:
+Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
+This will let you ignore the colliders on the gameobject casting them. 
+https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
+
+This allows enemy to shoot projectile while ignoring their own collider
+
+
 BUGS: 10/16
 
 10/7/2022
@@ -85,3 +93,17 @@ ENEMY TYPES: Walk and die (Vampire survivor), enemy stuck on walls that shoot, e
 
 TOTAL ENEMIES = 6
 
+========
+11/1/2022
+--------
+Made a tentancle in Unity
+
+
+========
+11/3/2022
+--------
+Enemy does not shoot player because the ray cast is hitting its own boxcollider.  How to make it shoot not itself?
+
+Make all enemy bullets ignore all enemy related things
+
+I think the layer, enemyCollides is to let player run through enemies even though they will take damage
