@@ -8,7 +8,7 @@ https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
 This allows enemy to shoot projectile while ignoring their own collider
 
 
-BUGS: 10/16
+BUGS: 10/16, 11/3
 
 10/7/2022
 ---------
@@ -102,12 +102,12 @@ Made a tentancle in Unity
 ========
 11/3/2022
 --------
-Enemy does not shoot player because the ray cast is hitting its own boxcollider.  How to make it shoot not itself?
-
-Make all enemy bullets ignore all enemy related things
-
-I think the layer, enemyCollides is to let player run through enemies even though they will take damage
-
-Make a way to make levels easy
-
-If Player is Dead, it will no longer move through enemies 
+}Enemy does not shoot player because the ray cast is hitting its own boxcollider.  How to make it shoot not itself?}
+}Make all enemy bullets ignore all enemy related things
+}I think the layer, enemyCollides is to let player run through enemies even though they will take damage
+}Make a way to make levels easy
+}NEED TO MAKE ENEMYSTUCKONWALLRANGE Not walkable
+}If Player is Dead, it will no longer move through enemies 
+}BUG: Enemy can like walk through the wall due to A* not considering boxcolliders, to deal with this, I will try to make enemy sprite smaller
+and make the terrain cannot walk area bigger (Located in A* object in Unity)
+Basically, make everything smaller but terrain bigger
