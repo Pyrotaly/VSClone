@@ -107,3 +107,7 @@ Enemy does not shoot player because the ray cast is hitting its own boxcollider.
 Make all enemy bullets ignore all enemy related things
 
 I think the layer, enemyCollides is to let player run through enemies even though they will take damage
+
+Make a way to make levels easy
+
+If Player is Dead, it will no longer move through enemies 
