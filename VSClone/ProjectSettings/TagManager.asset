@@ -16,7 +16,7 @@ TagManager:
   - Impassible
   - PlayerBullet
   - Enemy
-  - EnemyCollides
+  - 
   - EnemyBullet
   - 
   - 
