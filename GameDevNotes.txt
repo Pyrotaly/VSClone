@@ -138,3 +138,4 @@ new idea to make item allowed, have a bool if weapon is useable, if true than ca
 Currently pick up is picked up via checking tag collision.  Maybe it could be a layer also
 
 GUN PICK UP NOW WORKS
+

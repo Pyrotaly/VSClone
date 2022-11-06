@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Gun : MonoBehaviour                   //TODO: Need to make gun blue print better
+public abstract class Gun : MonoBehaviour                  
 {
     [Header("References")]
     [SerializeField] private Transform firePoint;           //It is gameobjectTransform on player in Hierachy

@@ -67,16 +67,6 @@ public class MouseManager : MonoBehaviour
     }
     #endregion
 
-    private void StartFiring()
-    {
-
-    }
-
-    private void StopFiring()
-    {
-
-    }
-
     public void OnDeviceChange(PlayerInput pi)
     {
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
