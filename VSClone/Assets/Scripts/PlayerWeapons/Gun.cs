@@ -9,6 +9,9 @@ public abstract class Gun : MonoBehaviour                   //TODO: Need to make
     [SerializeField] private GameObject bulletPrefab;
     private MouseManager mouseManager;
 
+    [Header("EquipmentBool")]
+    public bool Equipped;
+
     [Header("Bullet Management")]
     [SerializeField] private float bulletForce = 20f;       //Speed of bullet
     [SerializeField] private float fireRate = 2f;           //Higher number, faster fire rate

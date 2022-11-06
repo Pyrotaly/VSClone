@@ -1,4 +1,4 @@
-Goals: Make bullet despawn or is there a wall?, Add more Guns, How to make code reusable, Make enemy designs, HARD: Work on Boss AI, HARD(NEEDED??): Map transitioning and randomization, Map Design?
+Goals: Make bullet despawn or is there a wall?, Make enemy designs, HARD: Work on Boss AI, HARD(NEEDED??): Map transitioning and randomization, Map Design?
 
 IMPORTANT NOTE: In Unity I DID THIS:
 Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
@@ -127,4 +127,14 @@ https://youtu.be/q85gG0GLyG0?t=380 I think this tutorial is my answer to weapon 
 
 BUGS: When swtiching weapon, can swap weapon and each weapon will shoot but the console has this error of courtoine not happening because the game object is not active which is what I want...
 
-To add a gameobject, the pickup will have a prefab of a gun or something and the prefab with a transform of zero will be added, not the pick up on the ground 
+
+========
+11/6/2022
+--------
+GOAL: Make room switching like Binding of Issac or Celeste
+
+new idea to make item allowed, have a bool if weapon is useable, if true than can use it
+
+Currently pick up is picked up via checking tag collision.  Maybe it could be a layer also
+
+GUN PICK UP NOW WORKS
