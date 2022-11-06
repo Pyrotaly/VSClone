@@ -7,12 +7,6 @@ using UnityEngine.InputSystem;
 public class PlayerWeaponSwap : MonoBehaviour
 {
     [SerializeField] private int selectedWeapon = 0;
-    private Gun[] gunList;
-
-    private void Awake()
-    {
-        gunList = GetComponentsInChildren<Gun>();
-    }
 
     private void Start()
     {
@@ -36,7 +30,6 @@ public class PlayerWeaponSwap : MonoBehaviour
         }
 
     }
-
 
     public void OnNextWeapon(InputAction.CallbackContext context)
     {

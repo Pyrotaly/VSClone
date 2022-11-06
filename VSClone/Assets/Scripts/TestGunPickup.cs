@@ -8,6 +8,15 @@ public class TestGunPickup : MonoBehaviour
     [SerializeField] private Transform parent;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(gunToEnable, parent);
+        if (collision.tag == "Player")
+        {
+            foreach (Transform child in parent)
+            {
+                child.gameObject.SetActive(false);
+            }
+
+            Instantiate(gunToEnable, parent);
+            Destroy(gameObject);
+        }
     }
 }
