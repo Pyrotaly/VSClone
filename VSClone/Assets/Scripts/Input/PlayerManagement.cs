@@ -119,7 +119,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     private IEnumerator Invunerability()
     {
         //Ignore collision from enemies 
-        //Physics2D.IgnoreLayerCollision(layersToIgnore[0], layersToIgnore[1], true);
+        //Physics2D.IgnoreLayerCollision(layersToIgnore[0], layersToIgnore[1], true);       //Try to make it flexible from game engine but it doesn't work
         Physics2D.IgnoreLayerCollision(3, 9, true);
 
         for (int i = 0; i < numberOfFlashes; i++)
@@ -192,5 +192,6 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     {
         aim = context.ReadValue<Vector2>();
     }
+
     #endregion
 }
