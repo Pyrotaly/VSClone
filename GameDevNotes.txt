@@ -1,4 +1,4 @@
-Goals: Make bullet despawn or is there a wall?, Add more Guns, How to make code reusable, Make enemy designs, HARD: Work on Boss AI, HARD(NEEDED??): Map transitioning and randomization, Map Design?
+Goals: Make bullet despawn or is there a wall?, Make enemy designs, HARD: Work on Boss AI, HARD(NEEDED??): Map transitioning and randomization, Map Design?
 
 IMPORTANT NOTE: In Unity I DID THIS:
 Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
@@ -8,7 +8,8 @@ https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
 This allows enemy to shoot projectile while ignoring their own collider
 
 
-BUGS: 10/16, 11/3
+BUGS: 10/16, 11/3. 11/5
+TODO FUTURE: Make Scroll Wheel Switch Weapon somehow.  It is coded in but not sure if will do what I want
 
 10/7/2022
 ---------
@@ -111,3 +112,29 @@ Made a tentancle in Unity
 }BUG: Enemy can like walk through the wall due to A* not considering boxcolliders, to deal with this, I will try to make enemy sprite smaller
 and make the terrain cannot walk area bigger (Located in A* object in Unity)
 Basically, make everything smaller but terrain bigger
+}RN, if want to change bullet damage from an entity, cannot change it from entity, have to see the prefab entity has and change it there
+
+}To make swapping thing, player list of weapon, adding gameobject and scroll through player item list
+
+========
+11/5/2022
+--------
+GOAL: Make player pick up weapon stuff
+Player will have infinite weapon switching.  Basically, I will give player all weapons they can have possibly have like Doom
+
+https://youtu.be/q85gG0GLyG0?t=380 I think this tutorial is my answer to weapon swapping
+}Have sprite object on player that can be replaced
+
+BUGS: When swtiching weapon, can swap weapon and each weapon will shoot but the console has this error of courtoine not happening because the game object is not active which is what I want...
+
+
+========
+11/6/2022
+--------
+GOAL: Make room switching like Binding of Issac or Celeste
+
+new idea to make item allowed, have a bool if weapon is useable, if true than can use it
+
+Currently pick up is picked up via checking tag collision.  Maybe it could be a layer also
+
+GUN PICK UP NOW WORKS

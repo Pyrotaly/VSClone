@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour        //TODO: Need to make gun blue print better
+public abstract class Gun : MonoBehaviour                   //TODO: Need to make gun blue print better
 {
     [Header("References")]
-    [SerializeField] private Transform firePoint;         //It is gameobjectTransform on player in Hierachy
+    [SerializeField] private Transform firePoint;           //It is gameobjectTransform on player in Hierachy
     [SerializeField] private GameObject bulletPrefab;
     private MouseManager mouseManager;
+
+    [Header("EquipmentBool")]
+    public bool Equipped;
 
     [Header("Bullet Management")]
     [SerializeField] private float bulletForce = 20f;       //Speed of bullet
@@ -81,10 +84,9 @@ public class Gun : MonoBehaviour        //TODO: Need to make gun blue print bett
         OnGunShot();
     }
 
-    private void OnGunShot()
-    {
-        //Put gun effects hear
-    }
+    protected abstract void OnGunShot(); //Add gun effects hear
+
+    protected abstract void OnGunReload(); //Add gun reload effects here
 
     private IEnumerator RapidFire()
     {
