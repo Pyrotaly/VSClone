@@ -1,6 +1,15 @@
-Goals: Make bullet despawn or is there a wall?, Add more Guns, -->>>>>>>>> HARD: Map transitioning and randomization
+Goals: Make bullet despawn or is there a wall?, Make enemy designs, HARD: Work on Boss AI, HARD(NEEDED??): Map transitioning and randomization, Map Design?
 
-BUGS: 10/16
+IMPORTANT NOTE: In Unity I DID THIS:
+Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
+This will let you ignore the colliders on the gameobject casting them. 
+https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
+
+This allows enemy to shoot projectile while ignoring their own collider
+
+
+BUGS: 10/16, 11/3. 11/5
+TODO FUTURE: Make Scroll Wheel Switch Weapon somehow.  It is coded in but not sure if will do what I want
 
 10/7/2022
 ---------
@@ -41,3 +50,92 @@ BUG: Enemy touch damage occurs only once
 10/21/2022
 --------
 GOAL: MAKE MAP
+========
+10/28-29/2022
+--------
+GOAL: Make BOSS AI?
+}Not sure if making randomized map is the good idea.  Might be better to focus on making a simple polished game.
+}Work on like 5 levels.  Hotline Miami style
+}5 Bosses, one is like a flood movement boss like Ori and the Blind Forest but it is reoccuring (blood flood).
+
+Basic Sum of Bosses, more detail below
+FIRST BASIC BOSS: Basic Enemy that is super strong who spawn mini version of it.  Bullet hell basically.  The mini version can be reoccuring enemy
+
+BLOOD FLOOD BOSS: First introduced as a boss to make player work on movement skill.  Will comeback again as another mechanic
+
+CLONE BOSS: Make a boss with similar movements and attacks as player (but more animated and not just a hopping blob).
+}How to make this boss like mimic the player for the first half
+
+DIMENSION WARPING BOSS THING: How to shift game from top down to a 2d.  Bullet hell, nothing else special, maybe just a boss testing all player skill
+
+FINAL BOSS: Like Furi Final Boss (not the spaceship alien thing) where the player just shoots at the monsters organs 
+
+
+
+FIRST BASIC BOSS: Mechanics: Spawn Mini Enemies (maybe only one or two max), shoot lots of bullets like Enter the Gungeon.  Maybe a phase of missile based attacks, final phase of bombs?
+				Killing mini enemies will give player like a 30 second window of no enemy
+
+
+BLOOD FOOD BOSS:
+
+CLONE BOSS: I feel like this boss should be the boss with lazers, swords, axes and other cool weapons in phase 2 and 3 and maybe 4. Needs a cutscene
+	
+DIMENSION WARPING BOSS: Have more cells.  When changing dimension with the animation, remove all mini enemies and then spawn in mini enemies depending on the phase.  
+Maybe add in the Clone Boss but weaker with less damage and less health in the final phase
+
+
+========
+10/28-29/2022
+--------
+GOAL: Work on BOSS AI and make enemy designs
+
+ENEMY TYPES: Walk and die (Vampire survivor), enemy stuck on walls that shoot, enemies that move and shoot, enemies that spawn enemies.  
+			REUSED ENEMIES: The mini enemy in BOSS 1, BOSS 3 weaker version
+
+TOTAL ENEMIES = 6
+
+========
+11/1/2022
+--------
+Made a tentancle in Unity
+
+
+========
+11/3/2022
+--------
+}Enemy does not shoot player because the ray cast is hitting its own boxcollider.  How to make it shoot not itself?}
+}Make all enemy bullets ignore all enemy related things
+}I think the layer, enemyCollides is to let player run through enemies even though they will take damage
+}Make a way to make levels easy
+}NEED TO MAKE ENEMYSTUCKONWALLRANGE Not walkable
+}If Player is Dead, it will no longer move through enemies 
+}BUG: Enemy can like walk through the wall due to A* not considering boxcolliders, to deal with this, I will try to make enemy sprite smaller
+and make the terrain cannot walk area bigger (Located in A* object in Unity)
+Basically, make everything smaller but terrain bigger
+}RN, if want to change bullet damage from an entity, cannot change it from entity, have to see the prefab entity has and change it there
+
+}To make swapping thing, player list of weapon, adding gameobject and scroll through player item list
+
+========
+11/5/2022
+--------
+GOAL: Make player pick up weapon stuff
+Player will have infinite weapon switching.  Basically, I will give player all weapons they can have possibly have like Doom
+
+https://youtu.be/q85gG0GLyG0?t=380 I think this tutorial is my answer to weapon swapping
+}Have sprite object on player that can be replaced
+
+BUGS: When swtiching weapon, can swap weapon and each weapon will shoot but the console has this error of courtoine not happening because the game object is not active which is what I want...
+
+
+========
+11/6/2022
+--------
+GOAL: Make room switching like Binding of Issac or Celeste
+
+new idea to make item allowed, have a bool if weapon is useable, if true than can use it
+
+Currently pick up is picked up via checking tag collision.  Maybe it could be a layer also
+
+GUN PICK UP NOW WORKS
+

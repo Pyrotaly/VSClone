@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour        //TODO: Need to make gun blue print better
+public abstract class Gun : MonoBehaviour                  
 {
     [Header("References")]
-    [SerializeField] private Transform firePoint;         //It is gameobjectTransform on player in Hierachy
+    [SerializeField] private Transform firePoint;           //It is gameobjectTransform on player in Hierachy
     [SerializeField] private GameObject bulletPrefab;
     private MouseManager mouseManager;
 
@@ -31,7 +31,7 @@ public class Gun : MonoBehaviour        //TODO: Need to make gun blue print bett
         mouseManager = GetComponentInParent<MouseManager>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         rapidFireWait = new WaitForSeconds(1 / fireRate);
         reloadWait = new WaitForSeconds(reloadTime);    
@@ -41,6 +41,13 @@ public class Gun : MonoBehaviour        //TODO: Need to make gun blue print bett
         mouseManager.OnR += StartReload;
 
         currentAmmo = maxAmmo;
+    }
+
+    private void OnDisable()
+    {
+        mouseManager.OnMouseLeftDown -= StartFiring;
+        mouseManager.OnMouseLeftUp -= StopFiring;
+        mouseManager.OnR -= StartReload;
     }
 
     private bool CanShoot()
@@ -81,10 +88,9 @@ public class Gun : MonoBehaviour        //TODO: Need to make gun blue print bett
         OnGunShot();
     }
 
-    private void OnGunShot()
-    {
-        //Put gun effects hear
-    }
+    protected abstract void OnGunShot(); //Add gun effects hear
+
+    protected abstract void OnGunReload(); //Add gun reload effects here
 
     private IEnumerator RapidFire()
     {
