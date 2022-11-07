@@ -45,7 +45,6 @@ public abstract class Gun : MonoBehaviour
 
     private void OnDisable()
     {
-        Debug.Log("Deactiveate");
         mouseManager.OnMouseLeftDown -= StartFiring;
         mouseManager.OnMouseLeftUp -= StopFiring;
         mouseManager.OnR -= StartReload;
