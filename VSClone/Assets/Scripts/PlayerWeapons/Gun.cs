@@ -9,9 +9,6 @@ public abstract class Gun : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     private MouseManager mouseManager;
 
-    [Header("EquipmentBool")]
-    public bool Equipped;
-
     [Header("Bullet Management")]
     [SerializeField] private float bulletForce = 20f;       //Speed of bullet
     [SerializeField] private float fireRate = 2f;           //Higher number, faster fire rate
@@ -34,7 +31,7 @@ public abstract class Gun : MonoBehaviour
         mouseManager = GetComponentInParent<MouseManager>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         rapidFireWait = new WaitForSeconds(1 / fireRate);
         reloadWait = new WaitForSeconds(reloadTime);    
@@ -44,6 +41,14 @@ public abstract class Gun : MonoBehaviour
         mouseManager.OnR += StartReload;
 
         currentAmmo = maxAmmo;
+    }
+
+    private void OnDisable()
+    {
+        Debug.Log("Deactiveate");
+        mouseManager.OnMouseLeftDown -= StartFiring;
+        mouseManager.OnMouseLeftUp -= StopFiring;
+        mouseManager.OnR -= StartReload;
     }
 
     private bool CanShoot()
