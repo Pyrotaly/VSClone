@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IDamageable
+public class BaseEnemy : MonoBehaviour, IDamageable
 {
     [SerializeField] private int Health = 400;
 
