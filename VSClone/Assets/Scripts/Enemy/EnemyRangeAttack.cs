@@ -42,7 +42,7 @@ public class EnemyRangeAttack : MonoBehaviour
     }
 
     //Make this an interface or reusable?
-    public void Shoot()
+    private void Shoot()
     {
         GameObject bulletIns = Instantiate(enemyBullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation); //bullet will spawn from enemy center
         Rigidbody2D rb = bulletIns.GetComponent<Rigidbody2D>();
