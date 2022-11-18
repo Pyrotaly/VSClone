@@ -29,7 +29,6 @@ public class HasDash : MonoBehaviour
         StartCoroutine(Dash(dashDirection));
     }
 
-    // TODO: Currently Dash only works in left and right
     private IEnumerator Dash(Vector2 dashDirection)
     {
         Debug.Log("Dash");

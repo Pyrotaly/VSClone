@@ -1,4 +1,4 @@
-Goals: Finish Player Dash, HARD: Work on Boss AI, Level Design? DRAWING: Make enemy designs
+Goals: Gun Bullet Spread?, HARD: Work on Boss AI, Level Design, GunFeel DRAWING: Make enemy designs
 
 IMPORTANT NOTE: In Unity I DID THIS:
 Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
@@ -155,3 +155,22 @@ GOAL: Need to work on boss bullet. Maybe draw. Finish game mechanics before maki
 }Adding Has Dash Script
 }Dash now works
 }BUG: When player is idle, dashing will do nothing because dashing is based on player Vector2 (which is 0 when idle).  Need to make it dash in direction player facing: Handle Direction and rework animation stuff
+
+
+========
+11/15/2022
+--------
+Goal: Work on Boss AI
+https://answers.unity.com/questions/11696/how-to-make-my-bullets-spread-when-fired.html Gun Feel?
+}Made bullet ish hell
+
+
+========
+11/16/2022
+--------
+Worked on enemy moves
+
+========
+11/76/2022
+--------
+
