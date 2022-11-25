@@ -8,6 +8,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     [Header("References")]
     [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private Animator animator;
+    private HasDash dashComponent;
 
     [Header("HealthManagement")]
     [SerializeField] private int Health = 400;
@@ -18,7 +19,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     [SerializeField] private int numberOfFlashes = 3;
     private SpriteRenderer spriteRenderer;
 
-    //Direction Management WIP
+    // TODO: Direction Management WIP
     private Vector2 facingDirection = Vector2.down; //Temporarily, player will be always facing down in terms of code
     private float facingDirectionLength = 0.75f;
     private Vector2 aim;
@@ -54,6 +55,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        dashComponent = GetComponent<HasDash>();
     }
 
     private void Update()
@@ -72,12 +74,16 @@ public class PlayerManagement : MonoBehaviour, IDamageable
 
     private void FixedUpdate()
     {
-        ManageHorizontalMovement();
+        if (!dashComponent.IsDashing)
+        {
+            ManageHorizontalMovement();
+        }
+        
     }
 
     private void ManageHorizontalMovement()
     {
-        rb2d.MovePosition(rb2d.position + moveDirection * (isSprinting ? sprintSpeed : walkSpeed) * Time.deltaTime);
+        rb2d.MovePosition(rb2d.position + moveDirection * walkSpeed * Time.deltaTime);
     }
 
     private void ManageFootstepSounds()
@@ -165,15 +171,18 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         }
     }
 
-    public void OnRunningInput(InputAction.CallbackContext context)
+    public void OnDashInput(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && dashComponent.CanDash)
         {
-            isSprinting = true;
-        }
-        else if (context.canceled)
-        {
-            isSprinting = false;
+            if (moveDirection != Vector2.zero)
+            {
+                dashComponent.StartDash(moveDirection);
+            }
+            else
+            {   
+                dashComponent.StartDash(new Vector2(0, -2));    // TODO: Dash a distance based on player direction if not moving
+            }
         }
     }
 

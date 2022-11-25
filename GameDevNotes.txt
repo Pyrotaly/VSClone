@@ -1,4 +1,4 @@
-Goals: Make bullet despawn or is there a wall?, Make enemy designs, HARD: Work on Boss AI, HARD(NEEDED??): Map transitioning and randomization, Map Design?
+Goals: Gun Bullet Spread?, HARD: Work on Boss AI, Level Design, GunFeel DRAWING: Make enemy designs
 
 IMPORTANT NOTE: In Unity I DID THIS:
 Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
@@ -7,8 +7,9 @@ https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
 
 This allows enemy to shoot projectile while ignoring their own collider
 
+Bullet Despawn Manager, since the game is dungeon crawlerish, all bullet will eventually hit a wall and that will despawn the bullet
 
-BUGS: 10/16, 11/3. 11/5
+BUGS: 10/16, 11/3, 11/14
 TODO FUTURE: Make Scroll Wheel Switch Weapon somehow.  It is coded in but not sure if will do what I want
 
 10/7/2022
@@ -138,4 +139,38 @@ new idea to make item allowed, have a bool if weapon is useable, if true than ca
 Currently pick up is picked up via checking tag collision.  Maybe it could be a layer also
 
 GUN PICK UP NOW WORKS
+
+GOAL NOW: MAKE BOSS
+
+https://www.youtube.com/watch?v=5dlEl_G713A Bullet Hell Thing
+
+Change Enemy Structure to have Composition.  Basically, have ranged attacks or not 
+
+
+========
+11/14/2022
+--------
+GOAL: Need to work on boss bullet. Maybe draw. Finish game mechanics before making art
+}Player Dash should not be in direction of mouse, direction they are moving
+}Adding Has Dash Script
+}Dash now works
+}BUG: When player is idle, dashing will do nothing because dashing is based on player Vector2 (which is 0 when idle).  Need to make it dash in direction player facing: Handle Direction and rework animation stuff
+
+
+========
+11/15/2022
+--------
+Goal: Work on Boss AI
+https://answers.unity.com/questions/11696/how-to-make-my-bullets-spread-when-fired.html Gun Feel?
+}Made bullet ish hell
+
+
+========
+11/16/2022
+--------
+Worked on enemy moves
+
+========
+11/76/2022
+--------
 
