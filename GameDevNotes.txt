@@ -1,9 +1,13 @@
-Goals: Gun Bullet Spread?, HARD: Work on Boss AI, Level Design, GunFeel DRAWING: Make enemy designs
+Goals: Gun Bullet Spread?, Make Dash IFrame too (reuse the code for taking damage), HARD: Work on Boss AI, Level Design, GunFeel DRAWING: Make enemy designs
 
-IMPORTANT NOTE: In Unity I DID THIS:
+IMPORTANT NOTE: 
+}In Unity I DID THIS:
 Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
 This will let you ignore the colliders on the gameobject casting them. 
 https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
+
+}The behavior tree asset has a wierd bug where it has a white grid background.  To fix this, go to project settings, player, 
+scroll down to other settings, and change the color space back and forth from gamma and linear
 
 This allows enemy to shoot projectile while ignoring their own collider
 
@@ -90,7 +94,7 @@ Maybe add in the Clone Boss but weaker with less damage and less health in the f
 --------
 GOAL: Work on BOSS AI and make enemy designs
 
-ENEMY TYPES: Walk and die (Vampire survivor), enemy stuck on walls that shoot, enemies that move and shoot, enemies that spawn enemies.  
+ENEMY TYPES: Walk and touch player and deal damage (Vampire survivor), enemy stuck on walls that shoot, enemies that move and shoot, enemies that spawn enemies.  
 			REUSED ENEMIES: The mini enemy in BOSS 1, BOSS 3 weaker version
 
 TOTAL ENEMIES = 6
@@ -171,6 +175,26 @@ https://answers.unity.com/questions/11696/how-to-make-my-bullets-spread-when-fir
 Worked on enemy moves
 
 ========
-11/76/2022
+11/25-7 or so/2022
+--------
+Worked on behavior asset learning
+
+========
+12/2/2022
 --------
 
+Peashooter gun like pistol in Doom 2016, there for backup
+
+Add a speed function when shooting bullet in gun Shoot function
+
+When putting player in new scene, it needs to have reference to camera for mouse controller
+
+Maybe in first boss, when spawning in enemy, have it spawn in the corners
+
+When beat boss, take the boss gun and take it stuff
+
+Hitscan gun, make boss that dodge normal bullet so need hitscan
+
+Make bullet spin in circle https://youtu.be/1q7qlmOFRtY?t=2705  Probably for clone second boss
+
+For first boss, make it so that hitting boss the boss could become smaller and then that make it faster making the game hard,  use for narattive story telling thing

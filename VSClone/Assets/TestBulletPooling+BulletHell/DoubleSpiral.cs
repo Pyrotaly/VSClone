@@ -16,13 +16,13 @@ public class DoubleSpiral : MonoBehaviour
 
     private void Fire()
     {
-        for (int i = 0; i <= 1; i++)
+        for (int i = 0; i <= 1; i++)                                                                        
         {
-            float bulDirX = this.transform.position.x + Mathf.Sin(((angle + 180f * i) * Mathf.PI) / 180f);
-            float bulDirY = this.transform.position.x + Mathf.Cos(((angle + 180f * i) * Mathf.PI) / 180f);
+            float bulDirX = Mathf.Sin(((angle + 180f * i) * Mathf.PI) / 180f);  //Writes X vector of bullet, starting x position + sin(angle of i) //this.transform.position.x + 
+            float bulDirY = Mathf.Cos(((angle + 180f * i) * Mathf.PI) / 180f);  //Writes Y vector of bullet, starting y position + cos(angle of i) //this.transform.position.x + 
 
             Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
-            Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+            Vector2 bulDir = (bulMoveVector).normalized;                        // - transform.position
 
             GameObject bul = TestBulletPool.bulletPoolInstance.GetBullet();
             bul.transform.position = transform.position;
