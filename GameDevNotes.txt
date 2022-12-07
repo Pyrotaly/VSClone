@@ -5,6 +5,9 @@ Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Rayca
 This will let you ignore the colliders on the gameobject casting them. 
 https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
 
+FIX THE LICENSE ISSUE WITH THIS VIDEO
+https://www.youtube.com/watch?v=HcC40ZE4WPU
+
 This allows enemy to shoot projectile while ignoring their own collider
 
 Bullet Despawn Manager, since the game is dungeon crawlerish, all bullet will eventually hit a wall and that will despawn the bullet
