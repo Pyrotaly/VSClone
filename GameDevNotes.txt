@@ -1,4 +1,6 @@
-Goals: Gun Bullet Spread?, Make Dash IFrame too (reuse the code for taking damage), HARD: Work on Boss AI, Level Design, GunFeel DRAWING: Make enemy designs
+Goals: HARD: Work on Boss AI, Level Design, GunFeel DRAWING: Make enemy designs, Make Switching Weapons with other buttons somehow (probably learning how player can rebind button stuff)
+
+TODO: Dash a distance based on player direction if not moving
 
 IMPORTANT NOTE: 
 }In Unity I DID THIS:
@@ -198,3 +200,22 @@ Hitscan gun, make boss that dodge normal bullet so need hitscan
 Make bullet spin in circle https://youtu.be/1q7qlmOFRtY?t=2705  Probably for clone second boss
 
 For first boss, make it so that hitting boss the boss could become smaller and then that make it faster making the game hard,  use for narattive story telling thing
+
+========
+12/10/2022
+--------
+}Learned that there is a thing called playermaker
+
+
+========
+12/18/2022
+--------
+} FSM for basic enemies?  Probably not needed just need to flesh out the ai a bit more.
+Here is video: https://www.youtube.com/watch?v=-VkezxxjsSE
+
+ENEMY TYPES: Walk and touch player and deal damage (Vampire survivor), enemy stuck on walls that shoot, enemies that move and shoot (but keep distance), enemies that spawn enemies (walk randomly?).  
+			REUSED ENEMIES: The mini enemy in BOSS 1 (just beefy enemy), BOSS 3 weaker version (reuse)
+
+TOTAL ENEMIES = 6
+
+No need for health composition refacotring since code rn works fine

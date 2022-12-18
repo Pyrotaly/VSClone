@@ -2798,13 +2798,13 @@ GameObject:
   - component: {fileID: 513314423}
   - component: {fileID: 513314424}
   - component: {fileID: 513314425}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StuckOnWallRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &513314421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5451,7 +5451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1534719428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5999,7 +5999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951378724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38549584, y: 0.39642656, z: 4.3219194}
+  m_LocalPosition: {x: 0.51, y: -4.18, z: 4.3219194}
   m_LocalScale: {x: 1.8656, y: 1.8656, z: 1.8656}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6514,11 +6514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 553409796030946848, guid: e93c446a1630c7741818993605a520f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.67
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: 553409796030946848, guid: e93c446a1630c7741818993605a520f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.68
+      value: -4.37
       objectReference: {fileID: 0}
     - target: {fileID: 553409796030946848, guid: e93c446a1630c7741818993605a520f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6556,6 +6556,30 @@ PrefabInstance:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
+      propertyPath: dashDuration
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
+      propertyPath: dashStrength
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
+      propertyPath: layerInts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
+      propertyPath: layerInts.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
+      propertyPath: layerInts.Array.data[1]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
+      propertyPath: layerInts.Array.data[2]
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2647658596272693726, guid: e93c446a1630c7741818993605a520f8, type: 3}
       propertyPath: m_Name
       value: Player

@@ -126,7 +126,11 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     {
         //Ignore collision from enemies 
         //Physics2D.IgnoreLayerCollision(layersToIgnore[0], layersToIgnore[1], true);       //Try to make it flexible from game engine but it doesn't work
+
+        //Layer Player ignores Layer Enemy
         Physics2D.IgnoreLayerCollision(3, 9, true);
+        //Layer Player ignores Layer EnemyBullet
+        Physics2D.IgnoreLayerCollision(3, 11, true);
 
         for (int i = 0; i < numberOfFlashes; i++)
         {
@@ -137,8 +141,8 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         }
 
         //Enable collision from enemies
-        //Physics2D.IgnoreLayerCollision(layersToIgnore[0], layersToIgnore[1], false);
         Physics2D.IgnoreLayerCollision(3, 9, false);
+        Physics2D.IgnoreLayerCollision(3, 11, false);
     }
 
     #region InputManager 
@@ -181,7 +185,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
             }
             else
             {   
-                dashComponent.StartDash(new Vector2(0, -2));    // TODO: Dash a distance based on player direction if not moving
+                dashComponent.StartDash(new Vector2(0, 1));    // TODO: Dash a distance based on player direction if not moving
             }
         }
     }

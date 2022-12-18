@@ -11,8 +11,13 @@ public class HasDash : MonoBehaviour
 
     [Header("Dash Settings")]
     [SerializeField] private float dashStrength = 10f;
-    [SerializeField] private float dashDuration = 0.1f;
+    [SerializeField] private float dashDuration = 0.25f;
     [SerializeField] private float dashCooldown = 0.5f;  // Brief Pause before Dashing Again
+
+
+    [Header("IFrame Settings")]
+    [SerializeField] private int[] layerInts = new int[2];
+
 
     private void Awake()
     {
@@ -32,6 +37,8 @@ public class HasDash : MonoBehaviour
     private IEnumerator Dash(Vector2 dashDirection)
     {
         Debug.Log("Dash");
+        Physics2D.IgnoreLayerCollision(layerInts[0], layerInts[1], true);          //For Player Dash Component     3, 9, 11
+        Physics2D.IgnoreLayerCollision(layerInts[0], layerInts[2], true);          //Boss3 Dash Component          9, 3, 8
 
         IsDashing = true;
         CanDash = false;
@@ -40,5 +47,8 @@ public class HasDash : MonoBehaviour
         IsDashing = false;
         yield return new WaitForSeconds(dashCooldown);
         CanDash = true;
+
+        Physics2D.IgnoreLayerCollision(layerInts[0], layerInts[1], false);          //For Player Dash Component
+        Physics2D.IgnoreLayerCollision(layerInts[0], layerInts[2], false);
     }
 }

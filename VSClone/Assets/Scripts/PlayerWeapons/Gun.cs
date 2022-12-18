@@ -12,7 +12,9 @@ public abstract class Gun : MonoBehaviour
     [Header("Bullet Management")]
     [SerializeField] private float bulletForce = 20f;       //Speed of bullet
     [SerializeField] private float fireRate = 2f;           //Higher number, faster fire rate
-    [SerializeField] private bool rapidFire;                
+    [SerializeField] private int bulletSpreadMinAngle;
+    [SerializeField] private int bulletSpreadMaxAngle;
+    [SerializeField] private bool rapidFire;
     private float nextAttackTime;
     private WaitForSeconds rapidFireWait;
 
@@ -24,7 +26,7 @@ public abstract class Gun : MonoBehaviour
     [SerializeField] private float reloadTime = 2;
     private WaitForSeconds reloadWait;
 
-    Coroutine fireCoroutine;
+    private Coroutine fireCoroutine;
 
     private void Awake()
     {
@@ -78,12 +80,19 @@ public abstract class Gun : MonoBehaviour
     }
 
     private void Shoot()
-    {
+    {   
         currentAmmo -= ammoCostPerShot;
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        //Generate a random angle
+        int randomVal = Random.Range(bulletSpreadMinAngle, bulletSpreadMaxAngle);
+        Vector3 spread = new Vector3(0, 0, randomVal - 90);
+
+
+        //All guns are pointed upwards, rotation is handled in mouseManager, bullets shoot up relative to gun sprite
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(firePoint.rotation.eulerAngles + spread));
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        rb.AddForce(bullet.transform.up * bulletForce, ForceMode2D.Impulse);
 
         OnGunShot();
     }

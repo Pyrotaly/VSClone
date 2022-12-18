@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyRangeAttack : MonoBehaviour
+public class EnemyHasRangeAttack : MonoBehaviour
 {
     [SerializeField] private Transform target;
 
