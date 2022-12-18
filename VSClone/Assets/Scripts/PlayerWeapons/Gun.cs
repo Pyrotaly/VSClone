@@ -134,4 +134,19 @@ public abstract class Gun : MonoBehaviour
         currentAmmo = maxAmmo;          //TODO : Apparently, something here is not right, need to get ammo from reserve, not just full reload like overwatch?
         print("done reloading");
     }
+
+    private void OnDrawGizmos()
+    {
+        float rayRange = 6.0f;
+
+        Quaternion upRayRotation = Quaternion.AngleAxis(bulletSpreadMinAngle, Vector3.forward);
+        Quaternion downRayRotation = Quaternion.AngleAxis(bulletSpreadMaxAngle, Vector3.forward);
+
+        Vector3 upRayDirection = upRayRotation * transform.right * rayRange;
+        Vector3 downRayDirection = downRayRotation * transform.right * rayRange;
+
+        Gizmos.DrawRay(transform.position, upRayDirection);
+        Gizmos.DrawRay(transform.position, downRayDirection);
+        //Gizmos.DrawLine(transform.position + downRayDirection, transform.position + upRayDirection);
+    }
 }
