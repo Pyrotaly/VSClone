@@ -6,6 +6,7 @@ public class TestBulletPool : MonoBehaviour
 {
     public static TestBulletPool bulletPoolInstance;
 
+    // Bullet Boss Will Instantiate
     [SerializeField] private GameObject pooledBullet;
     private bool notEnoughBulletsInPool = true;
 

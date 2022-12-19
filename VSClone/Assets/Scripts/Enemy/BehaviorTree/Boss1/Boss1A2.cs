@@ -1,23 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BehaviorDesigner.Runtime.Tasks;
 
-public class FireBullets : MonoBehaviour
+public class Boss1A2 : EnemyAction
 {
     [SerializeField] private int bulletsAmount = 10;
 
     [SerializeField] private float startAngle = 90f, endAngle = 270f;
 
-    //public Vector3 startPoint;
     private const float radius = 1f;
 
-
-    //private Vector2 bulletMoveDirection;
-
-    // Start is called before the first frame update
-    void Start()
+    public override void OnStart()
     {
-        InvokeRepeating("Fire", 0f, 2f);    //Bullet fired every 2 seconds
+        Fire();
+    }
+
+    public override TaskStatus OnUpdate()
+    {
+        return TaskStatus.Success;
     }
 
     private void Fire()
@@ -37,10 +38,10 @@ public class FireBullets : MonoBehaviour
             Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
             GameObject bul = TestBulletPool.bulletPoolInstance.GetBullet();
-                bul.transform.position = transform.position;
-                bul.transform.rotation = transform.rotation;
-                bul.SetActive(true);
-                bul.GetComponent<TestBulletSpawn>().SetMoveDirection(bulDir);
+            bul.transform.position = transform.position;
+            bul.transform.rotation = transform.rotation;
+            bul.SetActive(true);
+            bul.GetComponent<TestBulletSpawn>().SetMoveDirection(bulDir);
 
             angle += angleStep;
         }

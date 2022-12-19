@@ -1,6 +1,17 @@
-Goals: HARD: Work on Boss AI, Level Design, GunFeel DRAWING: Make enemy designs, Make Switching Weapons with other buttons somehow (probably learning how player can rebind button stuff)
+Goals: HARD: Work on Boss AI, Level Design,
 
 TODO: Dash a distance based on player direction if not moving
+
+Polish:
+GunFeel DRAWING: Make enemy designs, 
+Make Switching Weapons with other buttons somehow (probably learning how player can rebind button stuff),
+Particle Manager,
+
+
+
+Future Notes: Probably add namespaces on bigger projects
+https://stackoverflow.com/questions/41904763/how-to-put-a-big-selection-of-files-into-a-namespace-in-visual-studio 
+I need a thing called ReSharper to add namespaces to scripts
 
 IMPORTANT NOTE: 
 }In Unity I DID THIS:
@@ -221,3 +232,10 @@ TOTAL ENEMIES = 6
 No need for health composition refacotring since code rn works fine
 
 https://stackoverflow.com/questions/52130986/can-we-create-a-gizmos-like-cone-in-unity-with-script for gizmo of cone
+
+
+========
+12/19/2022
+--------
+} For the future bosses, use the same bullet spawn pool script but in the scene, have a different bullet prefab or something
+} DOTween is an asset apparently

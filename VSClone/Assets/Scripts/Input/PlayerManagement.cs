@@ -30,7 +30,6 @@ public class PlayerManagement : MonoBehaviour, IDamageable
 
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 5; //Walkspeed
-    [SerializeField] private float sprintSpeed = 7; //SprintSpeed
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 RawMovementInput;
     private bool isSprinting;
@@ -46,9 +45,6 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     [SerializeField] private AudioClip[] dirtSteps;
     [SerializeField] private AudioClip[] rockSteps;
     private float footStepTimer = 0;    
-
-    //private float GetCurrentOffSet => isCrouching ? baseStepSpeed * crouchStepMultiplier :
-    //    isSprinting ? baseStepSpeed * sprintStepMultiplier : baseStepSpeed;
 
     private void Awake()
     {
@@ -124,9 +120,6 @@ public class PlayerManagement : MonoBehaviour, IDamageable
 
     private IEnumerator Invunerability()
     {
-        //Ignore collision from enemies 
-        //Physics2D.IgnoreLayerCollision(layersToIgnore[0], layersToIgnore[1], true);       //Try to make it flexible from game engine but it doesn't work
-
         //Layer Player ignores Layer Enemy
         Physics2D.IgnoreLayerCollision(3, 9, true);
         //Layer Player ignores Layer EnemyBullet
