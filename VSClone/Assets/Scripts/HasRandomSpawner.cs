@@ -11,12 +11,19 @@ public class HasRandomSpawner : MonoBehaviour
 
     private List<Vector3> SpawnedItemsPos = new List<Vector3>();
 
+    public void Start()
+    {
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    SpawnObjectAtRandom();
+        //}
+
+        InvokeRepeating("SpawnObjectAtRandom", 3f, 0.5f);
+    }
+
     public void StartSpawning()
     {
-        for (int i = 0; i < 5; i++)
-        {
-            SpawnObjectAtRandom();
-        }
+
     }
 
     //Might be expensive, before spawning item, checks to see if position of 

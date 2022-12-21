@@ -1,6 +1,8 @@
-Goals: HARD: Work on Boss AI (boss1 missile attacks), Level Design
+Goals: HARD: Work on Boss AI = implement moves, make moves do damage?, basic game UI, Level Design
 
 TODO: Dash a distance based on player direction if not moving, aka direction management
+
+Make basic main menu
 
 Polish:
 GunFeel DRAWING: Make enemy designs, 
@@ -264,3 +266,9 @@ To make spiral attack, had to use repeat and wait tasks
 For missile, could have the spawners near the edge of the map so that it would not spawn on top of boss
 
 Need to make attributes thingy to organize my tasks
+
+
+========
+12/21/2022
+--------
+} Copying the charge attack from the wierd green monster thing from dead cells
