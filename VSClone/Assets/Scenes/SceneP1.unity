@@ -6552,58 +6552,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1906164475328521228, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1906164475328521265, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: bulletSpreadMaxAngle
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 1906164475328521265, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: bulletSpreadMinAngle
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1906164476016715817, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: m_Name
-      value: MouseController/WeaponSwap
-      objectReference: {fileID: 0}
     - target: {fileID: 1906164476016715822, guid: e93c446a1630c7741818993605a520f8, type: 3}
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 1906164476410096925, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: bulletSpreadMaxAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1906164476410096925, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: bulletSpreadMinAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: dashDuration
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: dashStrength
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: layerInts.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: layerInts.Array.data[0]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: layerInts.Array.data[1]
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647658596272693697, guid: e93c446a1630c7741818993605a520f8, type: 3}
-      propertyPath: layerInts.Array.data[2]
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 2647658596272693726, guid: e93c446a1630c7741818993605a520f8, type: 3}
       propertyPath: m_Name
       value: Player

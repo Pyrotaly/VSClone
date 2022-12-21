@@ -1,6 +1,6 @@
-Goals: HARD: Work on Boss AI, Level Design,
+Goals: HARD: Work on Boss AI (boss1 missile attacks), Level Design
 
-TODO: Dash a distance based on player direction if not moving
+TODO: Dash a distance based on player direction if not moving, aka direction management
 
 Polish:
 GunFeel DRAWING: Make enemy designs, 
@@ -9,9 +9,11 @@ Particle Manager,
 
 
 
-Future Notes: Probably add namespaces on bigger projects
+Future Notes: Probably add namespaces on bigger projects, Assemblies or something
 https://stackoverflow.com/questions/41904763/how-to-put-a-big-selection-of-files-into-a-namespace-in-visual-studio 
 I need a thing called ReSharper to add namespaces to scripts
+
+Animation notes: https://answers.unity.com/questions/1023338/remove-animation-curves.html How to remove ease in and out
 
 IMPORTANT NOTE: 
 }In Unity I DID THIS:
@@ -239,3 +241,26 @@ https://stackoverflow.com/questions/52130986/can-we-create-a-gizmos-like-cone-in
 --------
 } For the future bosses, use the same bullet spawn pool script but in the scene, have a different bullet prefab or something
 } DOTween is an asset apparently
+} Use BulletML for bullet hell patters
+
+} For spiral attack, need to make it last for more than a mili sec for the spiral to form
+} Thinking on how to do missile attack
+
+It will be like the bird missile attack and enemy spawning indicator in Enter the Gungeon
+
+https://youtu.be/QSvfjt3MpP4?t=187 Example for enemy spawning indicator
+
+Two Things: Show an Indicator of Something, Spawn Something
+These can be two different scripts
+
+========
+12/20/2022
+--------
+Spawn Script can be used in many things like opening chest, spawning gun at end of level, enemy spawning
+} Triangle animation to temporary missle launch indication
+
+To make spiral attack, had to use repeat and wait tasks
+
+For missile, could have the spawners near the edge of the map so that it would not spawn on top of boss
+
+Need to make attributes thingy to organize my tasks

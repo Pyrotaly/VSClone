@@ -102,6 +102,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2674059340263375741, guid: dacc02ee336f79b45acb8f7e9cfbe48c, type: 3}
   bulletForce: 20
   fireRate: 6.71
+  bulletSpreadMinAngle: 100
+  bulletSpreadMaxAngle: 80
   rapidFire: 1
   maxAmmo: 1000
   ammoCostPerShot: 24
@@ -118,7 +120,7 @@ GameObject:
   - component: {fileID: 1906164476016715822}
   - component: {fileID: 1906164474599825092}
   m_Layer: 3
-  m_Name: MouseController+Cursor
+  m_Name: MouseController/WeaponSwap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,6 +275,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7884357289996429411, guid: dffbd5ddd982ba7448d7ca5f372441cd, type: 3}
   bulletForce: 20
   fireRate: 9.67
+  bulletSpreadMinAngle: 90
+  bulletSpreadMaxAngle: 90
   rapidFire: 1
   maxAmmo: 1000
   ammoCostPerShot: 50
@@ -806,7 +810,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   walkSpeed: 5
-  sprintSpeed: 7
   raycastTransform: {fileID: 0}
   baseStepSpeed: 0.5
   crouchStepMultiplier: 1.5
@@ -829,6 +832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDashing: 0
   CanDash: 0
-  dashStrength: 25
-  dashDuration: 0.1
+  dashStrength: 17
+  dashDuration: 22
   dashCooldown: 0.5
+  layerInts: 03000000090000000b000000
