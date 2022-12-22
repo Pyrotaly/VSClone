@@ -2,7 +2,7 @@ Goals: HARD: Work on Boss AI = implement moves, make moves do damage?, basic gam
 
 TODO: Dash a distance based on player direction if not moving, aka direction management
 
-Make basic main menu
+Make basic main menu (game manager)
 
 Polish:
 GunFeel DRAWING: Make enemy designs, 
@@ -272,3 +272,7 @@ Need to make attributes thingy to organize my tasks
 12/21/2022
 --------
 } Copying the charge attack from the wierd green monster thing from dead cells
+} Finished first phase of boss, though does no damage to player
+} Work on player direction, boss dealing damage, UI, then game states
+
+Player will symetrical, so just need to flip, not an 8 directional system though Boss 2 will probably be

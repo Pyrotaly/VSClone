@@ -59,6 +59,8 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         //Animation Management
         animator.SetFloat("Vertical", RawMovementInput.y);
         animator.SetFloat("Horizontal", Mathf.Abs(RawMovementInput.x));
+
+
         animator.SetBool("Move", Move);
 
         ManageFootstepSounds();
