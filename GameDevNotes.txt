@@ -1,15 +1,13 @@
-Goals: HARD: Work on Boss AI = implement moves, make moves do damage?, basic game UI, Level Design
+Goals: Work on Boss AI = implement moves (final) + make moves do damage, 
 
-TODO: Dash a distance based on player direction if not moving, aka direction management
+Saving
+Pause menu, game over screen
 
-Make basic main menu (game manager)
-
+Level Design
 Polish:
 GunFeel DRAWING: Make enemy designs, 
 Make Switching Weapons with other buttons somehow (probably learning how player can rebind button stuff),
-Particle Manager,
-
-
+Particle Manager, add dash animation
 
 Future Notes: Probably add namespaces on bigger projects, Assemblies or something
 https://stackoverflow.com/questions/41904763/how-to-put-a-big-selection-of-files-into-a-namespace-in-visual-studio 
@@ -22,11 +20,10 @@ IMPORTANT NOTE:
 Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
 This will let you ignore the colliders on the gameobject casting them. 
 https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
+This allows enemy to shoot projectile while ignoring their own collider
 
 }The behavior tree asset has a wierd bug where it has a white grid background.  To fix this, go to project settings, player, 
 scroll down to other settings, and change the color space back and forth from gamma and linear
-
-This allows enemy to shoot projectile while ignoring their own collider
 
 Bullet Despawn Manager, since the game is dungeon crawlerish, all bullet will eventually hit a wall and that will despawn the bullet
 
@@ -276,3 +273,41 @@ Need to make attributes thingy to organize my tasks
 } Work on player direction, boss dealing damage, UI, then game states
 
 Player will symetrical, so just need to flip, not an 8 directional system though Boss 2 will probably be
+
+Player direction rn is okay imo.  Dashes down if no input.  Since player is not using 8 direction thing, it will be confusing where dashing
+Make it so that only dash if player moving??
+
+Cannot see anything in game scene because each room has its own CM vcam.  They only turn on once game starts.
+
+} Making basic health bar and what gun is being used
+
+work with better namingConventions in future games
+} MADE HEALTH BAR
+
+https://www.youtube.com/watch?v=ZSlv4Fc3D74 this is how to change UI image
+
+add a vignette? https://youtu.be/V-iuC8x_3TA?t=26
+
+========
+12/22/2022
+--------
+} Trying to understand what game manager is going to do.  I think, it just keeps track of guns and health player has if there was saving
+or like loading to a new scene.  It good for when player die and need to reload scene
+
+https://www.youtube.com/watch?v=OmobsXZSRKo this is for loading scene thing
+
+I think, just need to make main menu game with buttons.  Only buttons that would work is exit game and enter game.
+
+Make button change text when selected?
+
+Need to figure out scene names or something
+Need to add scenes to build so game can actually switch scenes
+
+The only states game would have is pause game, load scene, gameover
+
+I think I will work on saving game.
+
+
+========
+12/23/2022
+--------

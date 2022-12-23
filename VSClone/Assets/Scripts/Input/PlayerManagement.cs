@@ -8,10 +8,12 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     [Header("References")]
     [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private Animator animator;
+    [SerializeField] GenericHealthBar.PlayerHealthBar healthBar;
     private HasDash dashComponent;
 
     [Header("HealthManagement")]
-    [SerializeField] private int Health = 400;
+    [SerializeField] private int maxHealth = 400;
+    [SerializeField] private int currentHealth;
 
     [Header("IFrames")]
     [SerializeField] private List<LayerMask> layersToIgnore;
@@ -20,8 +22,9 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     private SpriteRenderer spriteRenderer;
 
     // TODO: Direction Management WIP
-    private Vector2 facingDirection = Vector2.down; //Temporarily, player will be always facing down in terms of code
-    private float facingDirectionLength = 0.75f;
+    private Vector2 facingDirection = Vector2.down;     //Temporarily, player will be always facing down in terms of code
+    private float facingDirectionLength = 0.75f;        //How far infront of player raycast will shoot to check for IInteractable
+    private bool facingRight = true;
     private Vector2 aim;
 
     [Header("Interaction")]
@@ -54,12 +57,16 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         dashComponent = GetComponent<HasDash>();
     }
 
+    private void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
     private void Update()
     {
         //Animation Management
         animator.SetFloat("Vertical", RawMovementInput.y);
         animator.SetFloat("Horizontal", Mathf.Abs(RawMovementInput.x));
-
 
         animator.SetBool("Move", Move);
 
@@ -75,8 +82,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         if (!dashComponent.IsDashing)
         {
             ManageHorizontalMovement();
-        }
-        
+        }   
     }
 
     private void ManageHorizontalMovement()
@@ -108,9 +114,15 @@ public class PlayerManagement : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damageAmount)
     {
-        Health -= damageAmount;
+        currentHealth -= damageAmount;
 
-        if (Health <= 0)
+        float healthPercent = ((float)currentHealth / (float)maxHealth) * 100;
+
+        Debug.Log(healthPercent);
+
+        healthBar.SetHealth(healthPercent);
+
+        if (maxHealth <= 0)
         {
             Debug.Log("Player Dead");
         }
@@ -118,6 +130,15 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         {
             StartCoroutine(Invunerability());
         }
+    }
+
+    private void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
     private IEnumerator Invunerability()
@@ -157,16 +178,18 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         moveDirection.x = RawMovementInput.x;
         moveDirection.y = RawMovementInput.y;
 
+        //Debug.Log(moveDirection.x);
+
         //Temporary Flip Manager  https://www.youtube.com/watch?v=Cr-j7EoM8bg go here for better flip 
-
-        if (RawMovementInput.x > 0.6)
+        //Make face right
+        if (RawMovementInput.x > 0.6 && !facingRight)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            Flip();
         }
-
-        if (RawMovementInput.x < -0.6)
+        //Make face left
+        if (RawMovementInput.x < -0.6 && facingRight)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            Flip();
         }
     }
 
@@ -180,7 +203,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
             }
             else
             {   
-                dashComponent.StartDash(new Vector2(0, 1));    // TODO: Dash a distance based on player direction if not moving
+                dashComponent.StartDash(new Vector2(0, -1));    // TODO: Dash a distance based on player direction if not moving
             }
         }
     }
