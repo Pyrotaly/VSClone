@@ -1,13 +1,16 @@
 Goals: Work on Boss AI = implement moves (final) + make moves do damage, 
 
 Saving
-Pause menu, game over screen
+game over screen + settings
 
-Level Design
+Particle System
+Audio System
+
 Polish:
 GunFeel DRAWING: Make enemy designs, 
+Level Design
 Make Switching Weapons with other buttons somehow (probably learning how player can rebind button stuff),
-Particle Manager, add dash animation
+add dash animation
 
 Future Notes: Probably add namespaces on bigger projects, Assemblies or something
 https://stackoverflow.com/questions/41904763/how-to-put-a-big-selection-of-files-into-a-namespace-in-visual-studio 
@@ -311,3 +314,21 @@ I think I will work on saving game.
 ========
 12/23/2022
 --------
+} FINISHED ALL MENU UI except options but not any button functions since need to finish Options
+} Working on save feature
+} Note, when having game over thing, there is an animation on the entire UI image that increases the opacity of it to 100%
+
+https://www.youtube.com/watch?v=csqVa2Vimao this is how to rebind stuff
+
+}Things that in settings, Mouse Sensitivity, Resolution, QUality, Full Screen, Post Processing, Brightness
+Key binding
+
+https://www.youtube.com/watch?v=YOaYQrN1oYQ this brackey's video has thing on setting up volume
+
+Make game start with High Graphics quality
+
+========
+12/24/2022
+--------
+} The graphics are automatically high but will not update the dropdown in the options menu
+} All the exit to desktop things need refernce to DataPersistenceManager to access its application quit method, only one quit method???

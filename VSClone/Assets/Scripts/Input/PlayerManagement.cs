@@ -1,9 +1,10 @@
+using GenericSave;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerManagement : MonoBehaviour, IDamageable
+public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPersistence
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb2d;
@@ -223,6 +224,16 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     {
         aim = context.ReadValue<Vector2>();
     }
-
     #endregion
+
+    // Save and load player health
+    public void LoadData(GameData data)
+    {
+        currentHealth = data.playerHealth;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerHealth = currentHealth;
+    }
 }
