@@ -1,7 +1,6 @@
 Goals: Work on Boss AI = implement moves (final) + make moves do damage, 
 
 Saving
-game over screen + settings
 
 Particle System
 Audio System
@@ -332,3 +331,27 @@ Make game start with High Graphics quality
 --------
 } The graphics are automatically high but will not update the dropdown in the options menu
 } All the exit to desktop things need refernce to DataPersistenceManager to access its application quit method, only one quit method???
+} Make making comments more consistent in the future
+
+https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html this is how to save at a location or something
+
+C:\Users\Minha\AppData\LocalLow\DefaultCompany  So apparently, the data stored inthe file called ShopGame, so I changed it to VSClone
+Does not work if i change the name to VSClone.
+
+Need to make healthbar update DONE
+
+========
+12/25/2022
+--------
+} Adding checkpoint system since that would work with the save system when player would want to reload.  Not going to have multiple scenes
+} Instead, have one scene for dungeons, another scene for bosses
+
+Here is saving system, will save at beginning of each room.  So if player reloads during a battle, it will reset the battle
+} Too lazy, just split it up with scenes.  So 6 scenes, in total, 2 dungeons, boss, 2 dungeons, boss
+} Impletemend checkpoint system.  Since the player spawns on top of the checkpoint, i do not need to save the last checkpoint since 
+spawning on the checkpoint will automatically make it have reference to the most reent check point
+
+
+There are two types of Unity saving, additive and single.  My game is single saving
+
+Need to have that game only saves at certain points and not everytime the player quits.  Made my game save between scenes

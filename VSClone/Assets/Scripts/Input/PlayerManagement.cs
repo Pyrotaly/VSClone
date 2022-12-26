@@ -14,7 +14,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
 
     [Header("HealthManagement")]
     [SerializeField] private int maxHealth = 400;
-    [SerializeField] private int currentHealth;
+    [SerializeField] private int currentHealth = 400;
 
     [Header("IFrames")]
     [SerializeField] private List<LayerMask> layersToIgnore;
@@ -60,7 +60,9 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        float healthPercent = ((float)currentHealth / (float)maxHealth) * 100;
+
+        healthBar.SetHealth(healthPercent);
     }
 
     private void Update()
@@ -119,8 +121,6 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
 
         float healthPercent = ((float)currentHealth / (float)maxHealth) * 100;
 
-        Debug.Log(healthPercent);
-
         healthBar.SetHealth(healthPercent);
 
         if (maxHealth <= 0)
@@ -131,6 +131,11 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
         {
             StartCoroutine(Invunerability());
         }
+    }
+
+    private void AdjustHealthBar()
+    {
+
     }
 
     private void Flip()
@@ -230,10 +235,12 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
     public void LoadData(GameData data)
     {
         currentHealth = data.playerHealth;
+        transform.position = data.playerPosition;
     }
 
     public void SaveData(ref GameData data)
     {
         data.playerHealth = currentHealth;
+        data.playerPosition = CheckpointManager.Instance.lastCheckPoint;
     }
 }
