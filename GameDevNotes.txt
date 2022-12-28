@@ -1,19 +1,19 @@
 Goals: Work on Boss AI = implement moves (final) + make moves do damage, 
 
-Saving
-
 Particle System
-Audio System
+Audio System//And saving here with playerPreSet or something
+
+No rebinding...
 
 Polish:
-GunFeel DRAWING: Make enemy designs, 
+GunFeel DRAWING: Make enemy designs, (also a picture of how to play)
 Level Design
 Make Switching Weapons with other buttons somehow (probably learning how player can rebind button stuff),
-add dash animation
+ART: add dash animation
 
 Future Notes: Probably add namespaces on bigger projects, Assemblies or something
 https://stackoverflow.com/questions/41904763/how-to-put-a-big-selection-of-files-into-a-namespace-in-visual-studio 
-I need a thing called ReSharper to add namespaces to scripts
+I need a thing called ReSharper to add namespaces to scripts // COSTS MONEY 
 
 Animation notes: https://answers.unity.com/questions/1023338/remove-animation-curves.html How to remove ease in and out
 
@@ -355,3 +355,44 @@ spawning on the checkpoint will automatically make it have reference to the most
 There are two types of Unity saving, additive and single.  My game is single saving
 
 Need to have that game only saves at certain points and not everytime the player quits.  Made my game save between scenes
+
+Do I even need to have save slots in this game?  Just implement because every game has it (except games like Cod...)
+
+I will not implement save slot system for this game.  Will be like Miami Hotline GAME DESIGN: Before scene transition, heal player's health
+
+========
+12/26/2022
+--------
+Saving in this game will just be at checkpoints.
+
+Learning how to do level select.  Fading in between scenes.  MADE LEVEL CHANGER HANDLER thing.
+
+So each game will have its own level Handler.  Other things will call it to make the level handler switch to it
+PlayerPrefs vs using save file to manage level progress.
+
+Learned Player Prefs!
+
+PlayerPrefs is good for menu settings.  Save file for level completed https://youtu.be/aUi9aijvpgs?t=1062 return here to save with dictionaries
+Only need to know what level to be unlocked in main menu -- Will set dictionary with boolean value for main menu load to check
+
+========
+12/27/2022
+--------
+Need to try if level selects worked or not
+
+Okay, when making level, need player to get reference to camera, canvas with healh bar script on player too.  Need player set health adjusted on health bar script
+
+Need to make game load when switching to new scene
+
+Implementing bandaid solution.  The DataPersistenceManager only gets reference to things with the Interface if the object is enabled.
+The main menu button has things that require the DPM to get but can't since it inactive.
+
+Need to make options saved in player prefs and then done
+
+Too lazy to make saving with guns so before player pick up gun, have checkpoint before picking up gun  
+
+SAVING AND LEVEL SELECT DONE!!
+
+========
+12/28/2022
+--------

@@ -529,46 +529,6 @@ MonoBehaviour:
     m_ActionId: 87d7aa04-3914-4f21-819c-d963ce2e2ea0
     m_ActionName: Gameplay/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/s,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d45347c3-c92f-4fee-ae33-3377fbcf6a93
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f4341bfc-fe4f-46ff-91b3-88566432b204
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8537d117-51e4-415b-a8ad-d4e263e876e9
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d1d41989-dfcc-4699-985c-b731f2de2d53
-    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4e645ea0-ec1c-4e17-8f6a-8f627741fa60
-    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8b3451c6-ec5e-4ac3-b26e-3bcb32d35c9a
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 290c9507-7a37-4248-8e09-410fcd30d03e
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7fed44fd-7e7d-481f-a2d4-bd9dcf399a0b
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1f7fbafb-3289-49f3-9c40-9ae4a3f4303d
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 15213a36-7c3b-4e93-8e1c-11d3efeaa0d0
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2647658596221878613}
         m_TargetAssemblyTypeName: PlayerManagement, Assembly-CSharp
@@ -712,6 +672,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3d1ebc87-23e2-4959-9096-a6a7d44c8ce0
     m_ActionName: Gameplay/Reload[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GenericPauseMenu.PauseMenu, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7cb1fd6b-29f7-4c3a-aefc-c5788a82a603
+    m_ActionName: Gameplay/Escape[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -798,7 +774,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 6479370505329949519}
   animator: {fileID: 1149585686491273292}
-  Health: 60
+  healthBar: {fileID: 0}
+  maxHealth: 400
+  currentHealth: 400
   layersToIgnore:
   - serializedVersion: 2
     m_Bits: 8
@@ -833,6 +811,6 @@ MonoBehaviour:
   IsDashing: 0
   CanDash: 0
   dashStrength: 17
-  dashDuration: 22
+  dashDuration: 0.22
   dashCooldown: 0.5
   layerInts: 03000000090000000b000000

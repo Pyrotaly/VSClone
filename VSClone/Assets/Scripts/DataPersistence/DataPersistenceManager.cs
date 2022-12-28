@@ -106,7 +106,7 @@ namespace GenericSave
             // save that data to a file using the data handler
             dataHandler.Save(gameData);
         }
-
+         
         private void OnApplicationQuit()
         {
             SaveGame();
@@ -116,6 +116,8 @@ namespace GenericSave
         {
             IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>()
                 .OfType<IDataPersistence>();
+
+
 
             return new List<IDataPersistence>(dataPersistenceObjects);
         }

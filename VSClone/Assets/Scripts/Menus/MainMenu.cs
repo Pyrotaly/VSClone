@@ -17,10 +17,10 @@ namespace GenericMainMenu
 
         private void Start()
         {
-            if (!GenericSave.DataPersistenceManager.instance.HasGameData())
-            {
-                continueGameButton.interactable = false;
-            }
+            //if (!GenericSave.DataPersistenceManager.instance.HasGameData())
+            //{
+            //    continueGameButton.interactable = false;
+            //}
         }
 
         public void PlayGame()
