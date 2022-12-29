@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
+using UnityEngine.Events;
 
 namespace GenericSettingsMenu
 {
@@ -9,6 +11,10 @@ namespace GenericSettingsMenu
     {
         [SerializeField] private TMPro.TMP_Dropdown resolutionDropdown;
         private Resolution[] resolutions;
+
+        [SerializeField] private Slider volumeSlider;
+
+        const string resValue = "resolutionvalue";
 
         private void Start()
         {
@@ -29,7 +35,7 @@ namespace GenericSettingsMenu
                 }
             }
             resolutionDropdown.AddOptions(options);
-            resolutionDropdown.value = currenResolutionIndex;
+            resolutionDropdown.value = PlayerPrefs.GetInt("resValue", currenResolutionIndex);       // will set resolution to the playerprefs and the default value will be determined from the for loop
             resolutionDropdown.RefreshShownValue(); 
         }
 
@@ -37,6 +43,7 @@ namespace GenericSettingsMenu
         {
             Resolution resolution = resolutions[resolutionIndex];
             Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+            PlayerPrefs.SetInt("resValue", resolutionDropdown.value);
         }
 
         public void SetVolume(float volume)

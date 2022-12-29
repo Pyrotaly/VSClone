@@ -1,9 +1,10 @@
 Goals: Work on Boss AI = implement moves (final) + make moves do damage, 
 
-Particle System
-Audio System//And saving here with playerPreSet or something
+No rebinding...  https://www.youtube.com/watch?v=csqVa2Vimao but here is a video if I were to
 
-No rebinding...
+Particle System
+Light System
+Audio System//And saving here with playerPreSet or something
 
 Polish:
 GunFeel DRAWING: Make enemy designs, (also a picture of how to play)
@@ -396,3 +397,13 @@ SAVING AND LEVEL SELECT DONE!!
 ========
 12/28/2022
 --------
+https://www.youtube.com/watch?v=rtpHU1kfabI learning how to save settings menu with playerPrefs
+
+Should check if full screen works or not...
+https://www.youtube.com/watch?v=LsfBQKXmSXU saving player audio preference
+https://www.youtube.com/watch?v=s-Y4e0mNuwI maybe this one too?
+
+========
+12/29/2022
+--------
+Working on particle system
