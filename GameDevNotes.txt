@@ -10,6 +10,7 @@ Polish:
 GunFeel DRAWING: Make enemy designs, (also a picture of how to play)
 Level Design
 Make Switching Weapons with other buttons somehow (probably learning how player can rebind button stuff),
+Cut Scene
 ART: add dash animation
 
 Future Notes: Probably add namespaces on bigger projects, Assemblies or something
@@ -407,3 +408,17 @@ https://www.youtube.com/watch?v=s-Y4e0mNuwI maybe this one too?
 12/29/2022
 --------
 Working on particle system
+
+Just realized, when making levels, need A star to bake the map.
+When making new level, need checkpoint manager too.  When player in a new scene, make it spawn on checkpoint
+
+https://youtu.be/GTTAEV6dOXs?t=192 sprite mask for making blood stain things
+
+Made Tile RuleMap.  Need to get used to it.  Not perfect but able to make sprite mask thing.  I think I need to make the tile rule to be bigger
+
+Maybe instead of red, make it some other color
+
+========
+12/30/2022
+--------
+Just doing a simple particle system.  Just make a super hard final boss to stand out.

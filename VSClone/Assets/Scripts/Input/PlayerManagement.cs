@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPersistence
+public class PlayerManagement : MonoBehaviour, IDamageable, IDataPersistence
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb2d;
