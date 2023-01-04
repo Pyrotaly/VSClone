@@ -1,9 +1,13 @@
 Goals: Work on Boss AI = implement moves (final) + make moves do damage, 
 
-No rebinding...  https://www.youtube.com/watch?v=csqVa2Vimao but here is a video if I were to
+No rebinding...  https://www.youtube.com/watch?v=csqVa2Vimao but here is a video if I were to.  
 
-Particle System
-Light System
+I think I need to draw basic gun assets and work on game art for player and enemies...
+
+Particle System????????? Done?
+Not sure about lighting system, gun muzzle
+player rotate gun to be more like enter the gungeon
+
 Audio System//And saving here with playerPreSet or something
 
 Polish:
@@ -31,7 +35,7 @@ scroll down to other settings, and change the color space back and forth from ga
 
 Bullet Despawn Manager, since the game is dungeon crawlerish, all bullet will eventually hit a wall and that will despawn the bullet
 
-BUGS: 10/16, 11/3, 11/14
+BUGS: 10/16, 11/3, 11/14, 1/1/2023
 TODO FUTURE: Make Scroll Wheel Switch Weapon somehow.  It is coded in but not sure if will do what I want
 
 10/7/2022
@@ -422,3 +426,59 @@ Maybe instead of red, make it some other color
 12/30/2022
 --------
 Just doing a simple particle system.  Just make a super hard final boss to stand out.
+Just particle of enemy exploding on death.
+Gun flash?
+
+Make a Dark Mode for Game?
+Does my game even have lighting?  I don't think my game has lighting except for gun shots...
+
+}}Learning to do muzzle flash shots https://www.youtube.com/watch?v=VbTPD8brf2g
+
+}}gun rotation to be like enter the gungeon  https://www.youtube.com/watch?v=XF05X0fVz_o LOOK AT TOP COMMENT...
+
+Drawing rn, having the most simple, super simple, designs ever
+
+}}https://www.youtube.com/watch?v=obYEeTEvS2M  adding cape to final boss to make it coolio.
+
+}}How to make eye follow player https://www.youtube.com/watch?v=b8ZYnsd-upI this is a video
+
+Thinking about final boss moves, could be all the same color but slightly different tint and slightly less full of red vs white
+https://youtu.be/JI7NGD8zUj4?t=279  This is the video from top
+
+When designing level, need to make sure the FadeTransition is not making the screen is not making the thing as much intended
+
+
+========
+01/01/2023
+--------
+For cloth of boss 2, just hand animate it, tried the video but that seems better with 2d sidescrolling
+
+Not to worry about gun flip?? since gun is flipped with the eventual new player design
+
+I think enemy exploding will leave particle on the ground just like hotline miami
+
+I think last game mechanic needed to code is to check if player killed all enemy in a room.  So the room manager there has list of enemies
+and once the list is empty, open the room
+
+Work on particle system
+
+https://www.youtube.com/watch?v=8fcI8W9NBEo this is how to do with room system
+https://www.youtube.com/watch?v=UWMmib1RYFE Observer pattern...
+
+Made room manager succesfully
+Enemy now have basic particle thing
+
+========
+01/02/2023
+--------
+} Need to fix particle system
+
+Things I need to draw:
+Enemies: Boss 1, enemy wall, enemy chase, enemy chase and shoot
+Player: Player, AR, Shotgun, LazerGun, MachineGun, Bazooka or Grenade Launcher
+		Try to draw guns in the 8 directional thing
+
+========
+01/03/2023
+--------
+https://youtu.be/V-iuC8x_3TA?t=56	this video is how some guy handle enemy death thing without animating them

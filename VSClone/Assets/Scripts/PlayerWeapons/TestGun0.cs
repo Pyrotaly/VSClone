@@ -6,11 +6,11 @@ public class TestGun0 : Gun
 {
     protected override void OnGunReload()
     {
-        //Add gun reload effect here
+        // TODO: Add gun reload effect here
     }
 
     protected override void OnGunShot()
     {
-        //Add gun shot effect here
+        // TODO: Add gun shot effect here
     }
 }

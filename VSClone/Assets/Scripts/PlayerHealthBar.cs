@@ -9,7 +9,7 @@ namespace GenericHealthBar
     {
         Slider healthSlider;
 
-        public void Start()
+        public void Awake()
         {
             healthSlider = GetComponent<Slider>();
         }
