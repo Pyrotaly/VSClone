@@ -407,3 +407,18 @@ https://www.youtube.com/watch?v=s-Y4e0mNuwI maybe this one too?
 12/29/2022
 --------
 Working on particle system
+
+
+
+========
+01/05/2023
+--------
+Adding Drawings.  I think this is the best so far.
+3840 X 2160 200 PPI.  Play with FilterMode in Unity?
+For smaller characters in game, draw them smaller in Krita.  Scaling makes things blurry in Unity
+
+Try with 7.00 px with Krita
+
+========
+01/06/2023
+--------
