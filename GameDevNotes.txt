@@ -1,14 +1,39 @@
-Goals: Gun Bullet Spread?, HARD: Work on Boss AI, Level Design, GunFeel DRAWING: Make enemy designs
+Goals: Work on Boss AI = implement moves (final) + make moves do damage, 
 
-IMPORTANT NOTE: In Unity I DID THIS:
+No rebinding...  https://www.youtube.com/watch?v=csqVa2Vimao but here is a video if I were to
+
+Particle System
+Light System
+Audio System//And saving here with playerPreSet or something
+
+Polish:
+GunFeel DRAWING: Make enemy designs, (also a picture of how to play)
+Level Design
+Make Switching Weapons with other buttons somehow (probably learning how player can rebind button stuff),
+ART: add dash animation
+
+Future Notes: Probably add namespaces on bigger projects, Assemblies or something
+https://stackoverflow.com/questions/41904763/how-to-put-a-big-selection-of-files-into-a-namespace-in-visual-studio 
+I need a thing called ReSharper to add namespaces to scripts // COSTS MONEY 
+
+Animation notes: https://answers.unity.com/questions/1023338/remove-animation-curves.html How to remove ease in and out
+
+IMPORTANT NOTE: 
+}In Unity I DID THIS:
 Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
 This will let you ignore the colliders on the gameobject casting them. 
 https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
+<<<<<<< proto-BossBehaviorTree
+=======
 
 FIX THE LICENSE ISSUE WITH THIS VIDEO
 https://www.youtube.com/watch?v=HcC40ZE4WPU
 
+>>>>>>> main
 This allows enemy to shoot projectile while ignoring their own collider
+
+}The behavior tree asset has a wierd bug where it has a white grid background.  To fix this, go to project settings, player, 
+scroll down to other settings, and change the color space back and forth from gamma and linear
 
 Bullet Despawn Manager, since the game is dungeon crawlerish, all bullet will eventually hit a wall and that will despawn the bullet
 
@@ -93,7 +118,7 @@ Maybe add in the Clone Boss but weaker with less damage and less health in the f
 --------
 GOAL: Work on BOSS AI and make enemy designs
 
-ENEMY TYPES: Walk and die (Vampire survivor), enemy stuck on walls that shoot, enemies that move and shoot, enemies that spawn enemies.  
+ENEMY TYPES: Walk and touch player and deal damage (Vampire survivor), enemy stuck on walls that shoot, enemies that move and shoot, enemies that spawn enemies.  
 			REUSED ENEMIES: The mini enemy in BOSS 1, BOSS 3 weaker version
 
 TOTAL ENEMIES = 6
@@ -174,6 +199,233 @@ https://answers.unity.com/questions/11696/how-to-make-my-bullets-spread-when-fir
 Worked on enemy moves
 
 ========
-11/76/2022
+11/25-7 or so/2022
+--------
+Worked on behavior asset learning
+
+========
+12/2/2022
 --------
 
+Peashooter gun like pistol in Doom 2016, there for backup
+
+Add a speed function when shooting bullet in gun Shoot function
+
+When putting player in new scene, it needs to have reference to camera for mouse controller
+
+Maybe in first boss, when spawning in enemy, have it spawn in the corners
+
+When beat boss, take the boss gun and take it stuff
+
+Hitscan gun, make boss that dodge normal bullet so need hitscan
+
+Make bullet spin in circle https://youtu.be/1q7qlmOFRtY?t=2705  Probably for clone second boss
+
+For first boss, make it so that hitting boss the boss could become smaller and then that make it faster making the game hard,  use for narattive story telling thing
+
+========
+12/10/2022
+--------
+}Learned that there is a thing called playermaker
+
+
+========
+12/18/2022
+--------
+} FSM for basic enemies?  Probably not needed just need to flesh out the ai a bit more.
+Here is video: https://www.youtube.com/watch?v=-VkezxxjsSE
+
+ENEMY TYPES: Walk and touch player and deal damage (Vampire survivor), enemy stuck on walls that shoot, enemies that move and shoot (but keep distance), enemies that spawn enemies (walk randomly?).  
+			REUSED ENEMIES: The mini enemy in BOSS 1 (just beefy enemy), BOSS 3 weaker version (reuse)
+
+TOTAL ENEMIES = 6
+
+No need for health composition refacotring since code rn works fine
+
+https://stackoverflow.com/questions/52130986/can-we-create-a-gizmos-like-cone-in-unity-with-script for gizmo of cone
+
+
+========
+12/19/2022
+--------
+} For the future bosses, use the same bullet spawn pool script but in the scene, have a different bullet prefab or something
+} DOTween is an asset apparently
+} Use BulletML for bullet hell patters
+
+} For spiral attack, need to make it last for more than a mili sec for the spiral to form
+} Thinking on how to do missile attack
+
+It will be like the bird missile attack and enemy spawning indicator in Enter the Gungeon
+
+https://youtu.be/QSvfjt3MpP4?t=187 Example for enemy spawning indicator
+
+Two Things: Show an Indicator of Something, Spawn Something
+These can be two different scripts
+
+========
+12/20/2022
+--------
+Spawn Script can be used in many things like opening chest, spawning gun at end of level, enemy spawning
+} Triangle animation to temporary missle launch indication
+
+To make spiral attack, had to use repeat and wait tasks
+
+For missile, could have the spawners near the edge of the map so that it would not spawn on top of boss
+
+Need to make attributes thingy to organize my tasks
+
+
+========
+12/21/2022
+--------
+} Copying the charge attack from the wierd green monster thing from dead cells
+} Finished first phase of boss, though does no damage to player
+} Work on player direction, boss dealing damage, UI, then game states
+
+Player will symetrical, so just need to flip, not an 8 directional system though Boss 2 will probably be
+
+Player direction rn is okay imo.  Dashes down if no input.  Since player is not using 8 direction thing, it will be confusing where dashing
+Make it so that only dash if player moving??
+
+Cannot see anything in game scene because each room has its own CM vcam.  They only turn on once game starts.
+
+} Making basic health bar and what gun is being used
+
+work with better namingConventions in future games
+} MADE HEALTH BAR
+
+https://www.youtube.com/watch?v=ZSlv4Fc3D74 this is how to change UI image
+
+add a vignette? https://youtu.be/V-iuC8x_3TA?t=26
+
+========
+12/22/2022
+--------
+} Trying to understand what game manager is going to do.  I think, it just keeps track of guns and health player has if there was saving
+or like loading to a new scene.  It good for when player die and need to reload scene
+
+https://www.youtube.com/watch?v=OmobsXZSRKo this is for loading scene thing
+
+I think, just need to make main menu game with buttons.  Only buttons that would work is exit game and enter game.
+
+Make button change text when selected?
+
+Need to figure out scene names or something
+Need to add scenes to build so game can actually switch scenes
+
+The only states game would have is pause game, load scene, gameover
+
+I think I will work on saving game.
+
+
+========
+12/23/2022
+--------
+} FINISHED ALL MENU UI except options but not any button functions since need to finish Options
+} Working on save feature
+} Note, when having game over thing, there is an animation on the entire UI image that increases the opacity of it to 100%
+
+https://www.youtube.com/watch?v=csqVa2Vimao this is how to rebind stuff
+
+}Things that in settings, Mouse Sensitivity, Resolution, QUality, Full Screen, Post Processing, Brightness
+Key binding
+
+https://www.youtube.com/watch?v=YOaYQrN1oYQ this brackey's video has thing on setting up volume
+
+Make game start with High Graphics quality
+
+========
+12/24/2022
+--------
+} The graphics are automatically high but will not update the dropdown in the options menu
+} All the exit to desktop things need refernce to DataPersistenceManager to access its application quit method, only one quit method???
+} Make making comments more consistent in the future
+
+https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html this is how to save at a location or something
+
+C:\Users\Minha\AppData\LocalLow\DefaultCompany  So apparently, the data stored inthe file called ShopGame, so I changed it to VSClone
+Does not work if i change the name to VSClone.
+
+Need to make healthbar update DONE
+
+========
+12/25/2022
+--------
+} Adding checkpoint system since that would work with the save system when player would want to reload.  Not going to have multiple scenes
+} Instead, have one scene for dungeons, another scene for bosses
+
+Here is saving system, will save at beginning of each room.  So if player reloads during a battle, it will reset the battle
+} Too lazy, just split it up with scenes.  So 6 scenes, in total, 2 dungeons, boss, 2 dungeons, boss
+} Impletemend checkpoint system.  Since the player spawns on top of the checkpoint, i do not need to save the last checkpoint since 
+spawning on the checkpoint will automatically make it have reference to the most reent check point
+
+
+There are two types of Unity saving, additive and single.  My game is single saving
+
+Need to have that game only saves at certain points and not everytime the player quits.  Made my game save between scenes
+
+Do I even need to have save slots in this game?  Just implement because every game has it (except games like Cod...)
+
+I will not implement save slot system for this game.  Will be like Miami Hotline GAME DESIGN: Before scene transition, heal player's health
+
+========
+12/26/2022
+--------
+Saving in this game will just be at checkpoints.
+
+Learning how to do level select.  Fading in between scenes.  MADE LEVEL CHANGER HANDLER thing.
+
+So each game will have its own level Handler.  Other things will call it to make the level handler switch to it
+PlayerPrefs vs using save file to manage level progress.
+
+Learned Player Prefs!
+
+PlayerPrefs is good for menu settings.  Save file for level completed https://youtu.be/aUi9aijvpgs?t=1062 return here to save with dictionaries
+Only need to know what level to be unlocked in main menu -- Will set dictionary with boolean value for main menu load to check
+
+========
+12/27/2022
+--------
+Need to try if level selects worked or not
+
+Okay, when making level, need player to get reference to camera, canvas with healh bar script on player too.  Need player set health adjusted on health bar script
+
+Need to make game load when switching to new scene
+
+Implementing bandaid solution.  The DataPersistenceManager only gets reference to things with the Interface if the object is enabled.
+The main menu button has things that require the DPM to get but can't since it inactive.
+
+Need to make options saved in player prefs and then done
+
+Too lazy to make saving with guns so before player pick up gun, have checkpoint before picking up gun  
+
+SAVING AND LEVEL SELECT DONE!!
+
+========
+12/28/2022
+--------
+https://www.youtube.com/watch?v=rtpHU1kfabI learning how to save settings menu with playerPrefs
+
+Should check if full screen works or not...
+https://www.youtube.com/watch?v=LsfBQKXmSXU saving player audio preference
+https://www.youtube.com/watch?v=s-Y4e0mNuwI maybe this one too?
+
+========
+12/29/2022
+--------
+Working on particle system
+
+
+
+========
+01/05/2023
+--------
+Adding Drawings.  I think this is the best so far.
+3840 X 2160 200 PPI.  Play with FilterMode in Unity?
+For smaller characters in game, draw them smaller in Krita.  Scaling makes things blurry in Unity
+
+Try with 7.00 px with Krita
+
+========
+01/06/2023
+--------

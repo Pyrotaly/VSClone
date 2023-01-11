@@ -1,17 +1,20 @@
+using GenericSave;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerManagement : MonoBehaviour, IDamageable
+public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPersistence
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private Animator animator;
+    [SerializeField] GenericHealthBar.PlayerHealthBar healthBar;
     private HasDash dashComponent;
 
     [Header("HealthManagement")]
-    [SerializeField] private int Health = 400;
+    [SerializeField] private int maxHealth = 400;
+    [SerializeField] private int currentHealth = 400;
 
     [Header("IFrames")]
     [SerializeField] private List<LayerMask> layersToIgnore;
@@ -20,8 +23,9 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     private SpriteRenderer spriteRenderer;
 
     // TODO: Direction Management WIP
-    private Vector2 facingDirection = Vector2.down; //Temporarily, player will be always facing down in terms of code
-    private float facingDirectionLength = 0.75f;
+    private Vector2 facingDirection = Vector2.down;     //Temporarily, player will be always facing down in terms of code
+    private float facingDirectionLength = 0.75f;        //How far infront of player raycast will shoot to check for IInteractable
+    private bool facingRight = true;
     private Vector2 aim;
 
     [Header("Interaction")]
@@ -30,7 +34,6 @@ public class PlayerManagement : MonoBehaviour, IDamageable
 
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 5; //Walkspeed
-    [SerializeField] private float sprintSpeed = 7; //SprintSpeed
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 RawMovementInput;
     private bool isSprinting;
@@ -47,9 +50,6 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     [SerializeField] private AudioClip[] rockSteps;
     private float footStepTimer = 0;    
 
-    //private float GetCurrentOffSet => isCrouching ? baseStepSpeed * crouchStepMultiplier :
-    //    isSprinting ? baseStepSpeed * sprintStepMultiplier : baseStepSpeed;
-
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -58,11 +58,19 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         dashComponent = GetComponent<HasDash>();
     }
 
+    private void Start()
+    {
+        float healthPercent = ((float)currentHealth / (float)maxHealth) * 100;
+
+        healthBar.SetHealth(healthPercent);
+    }
+
     private void Update()
     {
         //Animation Management
         animator.SetFloat("Vertical", RawMovementInput.y);
         animator.SetFloat("Horizontal", Mathf.Abs(RawMovementInput.x));
+
         animator.SetBool("Move", Move);
 
         ManageFootstepSounds();
@@ -77,8 +85,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         if (!dashComponent.IsDashing)
         {
             ManageHorizontalMovement();
-        }
-        
+        }   
     }
 
     private void ManageHorizontalMovement()
@@ -110,9 +117,13 @@ public class PlayerManagement : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damageAmount)
     {
-        Health -= damageAmount;
+        currentHealth -= damageAmount;
 
-        if (Health <= 0)
+        float healthPercent = ((float)currentHealth / (float)maxHealth) * 100;
+
+        healthBar.SetHealth(healthPercent);
+
+        if (maxHealth <= 0)
         {
             Debug.Log("Player Dead");
         }
@@ -122,11 +133,26 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         }
     }
 
+    private void AdjustHealthBar()
+    {
+
+    }
+
+    private void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
+    }
+
     private IEnumerator Invunerability()
     {
-        //Ignore collision from enemies 
-        //Physics2D.IgnoreLayerCollision(layersToIgnore[0], layersToIgnore[1], true);       //Try to make it flexible from game engine but it doesn't work
+        //Layer Player ignores Layer Enemy
         Physics2D.IgnoreLayerCollision(3, 9, true);
+        //Layer Player ignores Layer EnemyBullet
+        Physics2D.IgnoreLayerCollision(3, 11, true);
 
         for (int i = 0; i < numberOfFlashes; i++)
         {
@@ -137,8 +163,8 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         }
 
         //Enable collision from enemies
-        //Physics2D.IgnoreLayerCollision(layersToIgnore[0], layersToIgnore[1], false);
         Physics2D.IgnoreLayerCollision(3, 9, false);
+        Physics2D.IgnoreLayerCollision(3, 11, false);
     }
 
     #region InputManager 
@@ -158,16 +184,18 @@ public class PlayerManagement : MonoBehaviour, IDamageable
         moveDirection.x = RawMovementInput.x;
         moveDirection.y = RawMovementInput.y;
 
+        //Debug.Log(moveDirection.x);
+
         //Temporary Flip Manager  https://www.youtube.com/watch?v=Cr-j7EoM8bg go here for better flip 
-
-        if (RawMovementInput.x > 0.6)
+        //Make face right
+        if (RawMovementInput.x > 0.6 && !facingRight)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            Flip();
         }
-
-        if (RawMovementInput.x < -0.6)
+        //Make face left
+        if (RawMovementInput.x < -0.6 && facingRight)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            Flip();
         }
     }
 
@@ -181,7 +209,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable
             }
             else
             {   
-                dashComponent.StartDash(new Vector2(0, -2));    // TODO: Dash a distance based on player direction if not moving
+                dashComponent.StartDash(new Vector2(0, -1));    // TODO: Dash a distance based on player direction if not moving
             }
         }
     }
@@ -201,6 +229,18 @@ public class PlayerManagement : MonoBehaviour, IDamageable
     {
         aim = context.ReadValue<Vector2>();
     }
-
     #endregion
+
+    // Save and load player health
+    public void LoadData(GameData data)
+    {
+        currentHealth = data.playerHealth;
+        transform.position = data.playerPosition;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerHealth = currentHealth;
+        data.playerPosition = CheckpointManager.Instance.lastCheckPoint;
+    }
 }

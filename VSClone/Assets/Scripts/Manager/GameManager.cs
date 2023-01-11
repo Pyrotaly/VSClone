@@ -12,20 +12,19 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        //if (Instance != null)
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         Instance = this;
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
         //ChangeState(GameState.PlayerWalk);
-        ChangeState(GameState.GenerateGrid);
     }
 
     public void ChangeState(GameState newState)
@@ -35,8 +34,8 @@ public class GameManager : MonoBehaviour
         {
             case GameState.PlayerWalk:
                 break;
-            case GameState.GenerateGrid:
-                //GridManager.instance.TurnOnTiles();
+            case GameState.Pause:
+             
                 break;
             default:
                 break;
@@ -49,6 +48,7 @@ public class GameManager : MonoBehaviour
 public enum GameState
 {
     PlayerWalk,    //When the player is in control
-    GenerateGrid,   //This is essentially base build
-    SupplierMenu
+    Pause,  
+    LoadBetweenScene,
+    GameOver
 }

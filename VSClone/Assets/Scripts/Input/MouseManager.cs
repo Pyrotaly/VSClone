@@ -29,16 +29,10 @@ public class MouseManager : MonoBehaviour
     void Update()
     {
         worldPos = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-
-        //new Vector3 = testPos = new Vector2(Mathf.Round(worldPos.x), Mathf.Round(worldPos.y));    //Used for tile selection
-
-        //TODO : Only for base building
-        //transform.position = new Vector3(worldPos.x, worldPos.y, zPosition);          //Exact mouse position, used for changing cursor icon
     }
 
     private void FixedUpdate()
     {
-        //If not in base building then, not sure if base building in game 
         HandleGunRotation();
     }
 
@@ -60,7 +54,7 @@ public class MouseManager : MonoBehaviour
         }
     }
 
-    // Rotate button or reload button
+    //Reload button
     public void OnRInput(InputAction.CallbackContext context)   //This could be the key R
     {
         OnR();
