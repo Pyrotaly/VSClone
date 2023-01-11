@@ -23,6 +23,13 @@ IMPORTANT NOTE:
 Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
 This will let you ignore the colliders on the gameobject casting them. 
 https://answers.unity.com/questions/279514/raycast-ignore-trigger-colliders.html
+<<<<<<< proto-BossBehaviorTree
+=======
+
+FIX THE LICENSE ISSUE WITH THIS VIDEO
+https://www.youtube.com/watch?v=HcC40ZE4WPU
+
+>>>>>>> main
 This allows enemy to shoot projectile while ignoring their own collider
 
 }The behavior tree asset has a wierd bug where it has a white grid background.  To fix this, go to project settings, player, 
