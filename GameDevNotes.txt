@@ -429,4 +429,3 @@ Try with 7.00 px with Krita
 ========
 01/11/2023
 --------
-When drawing boss, the only thing that is different in reflection is just cape since it always flow one direction
