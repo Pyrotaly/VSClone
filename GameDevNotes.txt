@@ -429,3 +429,16 @@ Try with 7.00 px with Krita
 ========
 01/06/2023
 --------
+
+
+========
+01/12/2023
+--------
+
+To set the correct sprite in boss2, find angle compared from angle and set that angle as sprite
+Maybe branch all animations
+
+Set anim float or something 
+
+https://stackoverflow.com/questions/20147879/switch-case-can-i-use-a-range-instead-of-a-one-number 
+this is how to be more flexible with switch statements
