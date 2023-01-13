@@ -1,4 +1,4 @@
-Goals: Make two levels, Make Gun Have Overheat Mechanic?,Work on Boss AI = implement moves (final) + make moves do damage,
+Goals: Work on Boss AI = implement moves (final) + make moves do damage, 
 
 No rebinding...  https://www.youtube.com/watch?v=csqVa2Vimao but here is a video if I were to
 
@@ -39,7 +39,6 @@ Bullet Despawn Manager, since the game is dungeon crawlerish, all bullet will ev
 
 BUGS: 10/16, 11/3, 11/14
 TODO FUTURE: Make Scroll Wheel Switch Weapon somehow.  It is coded in but not sure if will do what I want
-Unity Tool Idea: 1/12/2023
 
 10/7/2022
 ---------
@@ -428,12 +427,8 @@ For smaller characters in game, draw them smaller in Krita.  Scaling makes thing
 Try with 7.00 px with Krita
 
 ========
-01/11/2023
+01/06/2023
 --------
-
-<<<<<<< HEAD
-When drawing boss, the only thing that is different in reflection is just cape since it always flow one direction
-=======
 
 
 ========
@@ -447,26 +442,7 @@ Set anim float or something
 
 https://stackoverflow.com/questions/20147879/switch-case-can-i-use-a-range-instead-of-a-one-number 
 this is how to be more flexible with switch statements
->>>>>>> 3e436d03a2af4807633a5aff1947bc74e846bcc1
 
-For boss2, the animation will a blend tree and the boss script will set the float value of the angle between
-it and the player as a parameter
-
-UNITY TOOL IDEA???
-Made it work!  So basically, every animation, is gonna need me to copy the motions based on idle which is annoying
-
-Organize files and be ready to start making levels
-
-Note when making level, need to apply A*
-
-Will Use Scene TestBulletHell... as the scene for Boss2
-
-Focus on making level
-
-
-
-My List of Things I gotta do:
-Put in weapons, make levels, make sound effects, make some gun feel, add a trail when player dashing
-
-make the final boss
-
+========
+01/13/2023
+--------
