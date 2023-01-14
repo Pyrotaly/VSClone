@@ -452,3 +452,11 @@ Basic enemies are animated with Unity transform and color change...
 
 Need to make electricity effect with lazer gun to have lazer hazards and cool effects
 https://www.youtube.com/watch?v=Y0ErHRrlqjs
+
+
+
+
+
+
+
+
