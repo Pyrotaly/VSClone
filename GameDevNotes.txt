@@ -3,7 +3,6 @@ Goals: Work on Boss AI = implement moves (final) + make moves do damage,
 No rebinding...  https://www.youtube.com/watch?v=csqVa2Vimao but here is a video if I were to
 
 Particle System
-Light System
 Audio System//And saving here with playerPreSet or something
 
 Polish:
