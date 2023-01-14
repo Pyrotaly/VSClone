@@ -18,6 +18,8 @@ I need a thing called ReSharper to add namespaces to scripts // COSTS MONEY
 
 Animation notes: https://answers.unity.com/questions/1023338/remove-animation-curves.html How to remove ease in and out
 
+Fix Krita middle mouse: https://www.reddit.com/r/XPpen/comments/roeds7/strange_middle_click_behavior_with_krita/
+
 IMPORTANT NOTE: 
 }In Unity I DID THIS:
 Go to Edit -> Project Settings -> Physics2d and Uncheck the box that says "Raycasts Start In Colliders".
@@ -446,3 +448,8 @@ this is how to be more flexible with switch statements
 ========
 01/13/2023
 --------
+
+Basic enemies are animated with Unity transform and color change...
+
+Need to make electricity effect with lazer gun to have lazer hazards and cool effects
+https://www.youtube.com/watch?v=Y0ErHRrlqjs
