@@ -133,11 +133,6 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
         }
     }
 
-    private void AdjustHealthBar()
-    {
-
-    }
-
     private void Flip()
     {
         Vector3 currentScale = gameObject.transform.localScale;

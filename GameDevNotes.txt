@@ -1,11 +1,13 @@
 Goals: Work on Boss AI = implement moves (final) + make moves do damage
 
-Particle System
+Particle System when enemy die
 Audio System//And saving here with playerPreSet or something
 
 Polish:
-GunFeel
+Finish Making Level functional
+GunFeel and enemy hurt
 ART: add dash trail
+End credit thing
 
 Future Notes: Probably add namespaces on bigger projects, Assemblies or something
 https://stackoverflow.com/questions/41904763/how-to-put-a-big-selection-of-files-into-a-namespace-in-visual-studio 
@@ -452,9 +454,22 @@ Need to make electricity effect with lazer gun to have lazer hazards and cool ef
 https://www.youtube.com/watch?v=Y0ErHRrlqjs
 
 
+========
+01/14/2023
+-------- 
+No need to have lightning thing
 
+Make gun work with player
+MakeGunOverHeat: https://www.youtube.com/watch?v=uOdJg4Ap3xM
+Gun Feel
+Make the level actually work
+Boss: Only need to animate half of the body then flip it.  The cape will be challenging
+Sound
 
+I am not going to change the heart icon, it does not really matter
+Fix2D Camera with cinemachine
 
+Code Note: Could make the Invunerability code reusable for both enemy and player...
 
-
-
+Games I want to play:...
+Thomas Was Alone, Oxenfree, FEZ, The Gardens Between, Year Walk, VA-11 Hall-A: Cyberpunk Bartender Action

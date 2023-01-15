@@ -9,6 +9,8 @@ public class HasDash : MonoBehaviour
     [HideInInspector] public bool IsDashing;
     [HideInInspector] public bool CanDash;
 
+    [SerializeField] private TrailRenderer trailRenderer;
+
     [Header("Dash Settings")]
     [SerializeField] private float dashStrength = 10f;
     [SerializeField] private float dashDuration = 0.25f;
@@ -22,6 +24,7 @@ public class HasDash : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        trailRenderer = GetComponent<TrailRenderer>();
     }
 
     private void Start()
@@ -42,8 +45,10 @@ public class HasDash : MonoBehaviour
 
         IsDashing = true;
         CanDash = false;
+        trailRenderer.enabled = true;
         rb.velocity = dashDirection * dashStrength;
         yield return new WaitForSeconds(dashDuration);
+        trailRenderer.enabled = false;
         IsDashing = false;
         yield return new WaitForSeconds(dashCooldown);
         CanDash = true;
