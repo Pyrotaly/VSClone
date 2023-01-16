@@ -18,7 +18,7 @@ public class MouseManager : MonoBehaviour
     [SerializeField] private float zPosition;
      
         
-    public Action OnMouseHover, OnMouseRight, OnMouseLeftDown, OnMouseLeftUp,OnR;
+    public Action OnMouseHover, OnMouseRight, OnMouseLeftDown, OnMouseLeftUp, OnR;
 
     private Coroutine fireCoroutine;
 
@@ -57,7 +57,10 @@ public class MouseManager : MonoBehaviour
     //Reload button
     public void OnRInput(InputAction.CallbackContext context)   //This could be the key R
     {
-        OnR();
+        if (context.started)
+        {
+            OnR?.Invoke();
+        }
     }
     #endregion
 

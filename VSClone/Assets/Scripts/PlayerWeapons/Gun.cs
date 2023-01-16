@@ -7,7 +7,9 @@ public abstract class Gun : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform firePoint;           //It is gameobjectTransform on player in Hierachy
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject reloadAnimation;
     private MouseManager mouseManager;
+    private SpriteRenderer spriteRenderer;
 
     [Header("Bullet Management")]
     [SerializeField] private float bulletForce = 20f;       //Speed of bullet
@@ -28,13 +30,32 @@ public abstract class Gun : MonoBehaviour
 
     private Coroutine fireCoroutine;
 
+    private bool reloading;
+
     private void Awake()
     {
         mouseManager = GetComponentInParent<MouseManager>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    // If player switches weapon while reloading, switching back to the gun with incomplete reloading will restart reloading sequence
+    private void Start()
+    {
+        
+    }
+
+    private void Update()
+    {
+        if (reloading)
+        {
+            spriteRenderer.color = Color.Lerp(spriteRenderer.color, Color.white, reloadTime * Time.deltaTime);
+        }
     }
 
     private void OnEnable()
     {
+        reloading = false;
+
         rapidFireWait = new WaitForSeconds(1 / fireRate);
         reloadWait = new WaitForSeconds(reloadTime);    
 
@@ -54,7 +75,14 @@ public abstract class Gun : MonoBehaviour
 
     private bool CanShoot()
     {
-        return currentAmmo > 0;
+        if (!reloading)
+        {
+            return currentAmmo > 0;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private void StartFiring()
@@ -76,7 +104,12 @@ public abstract class Gun : MonoBehaviour
 
     private void StartReload()
     {
-        StartCoroutine(Reload());
+        if (!reloading)
+        {
+            reloading = true;
+            StartCoroutine(Reload());
+            Instantiate(reloadAnimation, GameObject.FindGameObjectWithTag("ReloadAnimationSpawnPoint").transform);
+        }
     }
 
     private void Shoot()
@@ -87,14 +120,22 @@ public abstract class Gun : MonoBehaviour
         int randomVal = Random.Range(bulletSpreadMinAngle, bulletSpreadMaxAngle);
         Vector3 spread = new Vector3(0, 0, randomVal - 90);
 
-
         //All guns are pointed upwards, rotation is handled in mouseManager, bullets shoot up relative to gun sprite
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(firePoint.rotation.eulerAngles + spread));
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
         rb.AddForce(bullet.transform.up * bulletForce, ForceMode2D.Impulse);
 
+        GunHeatingUpColor();
         OnGunShot();
+    }
+
+    // When shooting, gun will heat up, adjusting the gun sprite color
+    private void GunHeatingUpColor()
+    {
+        float redPercentage = -((float)currentAmmo / (float)maxAmmo) + 1;
+
+        spriteRenderer.color = new Color(redPercentage, 0, 0, 1);
     }
 
     protected abstract void OnGunShot(); //Add gun effects hear
@@ -113,12 +154,12 @@ public abstract class Gun : MonoBehaviour
                     Shoot();
                     yield return rapidFireWait;
                 }
-                StartCoroutine(Reload());
+                StartReload();
             }
         }
         else
         {
-            StartCoroutine(Reload());
+            StartReload();
         }
     }
 
@@ -129,10 +170,9 @@ public abstract class Gun : MonoBehaviour
             yield return null;
         }
 
-        print("reloading");
         yield return reloadWait;
-        currentAmmo = maxAmmo;          //TODO : Apparently, something here is not right, need to get ammo from reserve, not just full reload like overwatch?
-        print("done reloading");
+        currentAmmo = maxAmmo;
+        reloading = false;
     }
 
     private void OnDrawGizmos()

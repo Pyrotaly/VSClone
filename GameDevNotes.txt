@@ -459,11 +459,15 @@ https://www.youtube.com/watch?v=Y0ErHRrlqjs
 -------- 
 No need to have lightning thing
 
-Make gun work with player
-MakeGunOverHeat: https://www.youtube.com/watch?v=uOdJg4Ap3xM
+// DO LATER
+Make gun work with player, including making all reload things based on gun reload speed thing
+
+
+
 Gun Feel
 Make the level actually work
 Boss: Only need to animate half of the body then flip it.  The cape will be challenging
+
 Sound
 
 I am not going to change the heart icon, it does not really matter
@@ -473,3 +477,20 @@ Code Note: Could make the Invunerability code reusable for both enemy and player
 
 Games I want to play:...
 Thomas Was Alone, Oxenfree, FEZ, The Gardens Between, Year Walk, VA-11 Hall-A: Cyberpunk Bartender Action
+
+========
+01/15/2023
+-------- 
+
+// DO LATER
+Make gun work with player, including making all reload things based on gun reload speed thing
+
+Gun Feel?? I think its just sound
+
+Make the level actually worK... make the new enemy things actually work, make it so when open door it spawns in enemies, currently don't know how to handle enemies with my limited A* knowledge
+
+Boss: Only need to animate half of the body then flip it.  The cape will be challenging
+
+Sound
+
+Doing lot of bug fixes from play testing.  I think I fixed all the bugs

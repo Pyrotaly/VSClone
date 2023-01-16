@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerWeaponSwap : MonoBehaviour
 {
     [SerializeField] private int selectedWeapon = 0;
+    public Action onWeaponSwitch;
 
     private void Start()
     {
@@ -15,6 +16,8 @@ public class PlayerWeaponSwap : MonoBehaviour
 
     private void SelectedWeapon()
     {
+        onWeaponSwitch?.Invoke();
+
         int i = 0;
         foreach (Transform weapon in transform)
         {
