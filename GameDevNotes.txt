@@ -499,3 +499,5 @@ Doing lot of bug fixes from play testing.  I think I fixed all the bugs
 ========
 01/16/2023
 -------- 
+Make the level actually worK... make the new enemy things actually work, make it so when open door it spawns in enemies
+

@@ -230,12 +230,12 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
     public void LoadData(GameData data)
     {
         currentHealth = data.playerHealth;
-        transform.position = data.playerPosition;
+        //transform.position = data.playerPosition;
     }
 
     public void SaveData(ref GameData data)
     {
         data.playerHealth = currentHealth;
-        data.playerPosition = CheckpointManager.Instance.lastCheckPoint;
+        //data.playerPosition = CheckpointManager.Instance.lastCheckPoint;
     }
 }

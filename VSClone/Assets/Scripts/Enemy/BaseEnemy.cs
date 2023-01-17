@@ -11,7 +11,7 @@ public class BaseEnemy : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-                spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)      //Knock player?
