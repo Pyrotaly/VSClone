@@ -8,7 +8,6 @@ public class CheckPoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Work");
             CheckpointManager.Instance.lastCheckPoint = transform.position;
 
             Destroy(this);

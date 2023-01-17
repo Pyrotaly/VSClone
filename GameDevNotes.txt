@@ -494,3 +494,8 @@ Boss: Only need to animate half of the body then flip it.  The cape will be chal
 Sound
 
 Doing lot of bug fixes from play testing.  I think I fixed all the bugs
+
+
+========
+01/16/2023
+-------- 

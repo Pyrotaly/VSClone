@@ -2363,7 +2363,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.50980395}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2430,6 +2430,17 @@ Transform:
   m_Father: {fileID: 513314422}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055778462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 256135156357316321, guid: 313906a22d91aea42bad1abacdf4a37c, type: 3}
+  m_PrefabInstance: {fileID: 6016143601092950585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91e4c413f3734c428bdb579fd3a067b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1070269067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,8 +2805,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b718f16e6a1e984999ea3d81a33975b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 0}
-  enemyList: []
+  door: {fileID: 1771707005}
+  deathParticle: {fileID: 8737536528927275756, guid: 56f7b7dfe004c9c4d802cb067704750a, type: 3}
+  enemyList:
+  - {fileID: 1951378724}
+  - {fileID: 1534719427}
 --- !u!114 &1439372501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3897,6 +3911,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastCheckPoint: {x: 0, y: 0}
+--- !u!1 &1771707005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2117936149152919970, guid: f900a0b95337d0845acdd3d617299dc6, type: 3}
+  m_PrefabInstance: {fileID: 2117936149076087736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1951378724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4361,7 +4380,7 @@ PrefabInstance:
     - target: {fileID: 5329597578437895728, guid: ce0a7f5c02e8d854a80c927b755b0113, type: 3}
       propertyPath: fader
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1055778462}
     - target: {fileID: 5329597578437895728, guid: ce0a7f5c02e8d854a80c927b755b0113, type: 3}
       propertyPath: nextLevelID
       value: 2
@@ -4566,7 +4585,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4524517883188947919}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2117936149076087740, guid: f900a0b95337d0845acdd3d617299dc6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f900a0b95337d0845acdd3d617299dc6, type: 3}
 --- !u!4 &2117936149076087737 stripped
 Transform:
@@ -4641,7 +4661,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.38814783
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -4649,8 +4669,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.58026123
-        value: 0
+        time: 0.9073334
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
