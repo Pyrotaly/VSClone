@@ -15,6 +15,8 @@ public class TestGunPickup : MonoBehaviour
                 child.gameObject.SetActive(false);
             }
 
+            // TODO: Play a sound
+
             Instantiate(gunToEnable, parent);
             Destroy(gameObject);
         }
