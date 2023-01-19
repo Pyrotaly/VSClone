@@ -39,7 +39,6 @@ public class HasDash : MonoBehaviour
 
     private IEnumerator Dash(Vector2 dashDirection)
     {
-        Debug.Log("Dash");
         Physics2D.IgnoreLayerCollision(layerInts[0], layerInts[1], true);          //For Player Dash Component     3, 9, 11
         Physics2D.IgnoreLayerCollision(layerInts[0], layerInts[2], true);          //Boss3 Dash Component          9, 3, 8
 

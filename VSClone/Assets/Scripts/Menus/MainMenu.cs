@@ -29,7 +29,7 @@ namespace GenericMainMenu
 
             GenericSave.DataPersistenceManager.instance.NewGame();
 
-            SceneManager.LoadSceneAsync("SceneP1");
+            SceneManager.LoadSceneAsync(newGameSceneName);
         }
 
         public void ContinueGame()

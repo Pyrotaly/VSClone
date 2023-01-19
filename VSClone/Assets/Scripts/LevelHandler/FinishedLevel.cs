@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinishedLevel : MonoBehaviour, GenericSave.IDataPersistence
+public class FinishedLevel : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private int currentLevelID = 0;
     [SerializeField] private int nextLevelID = 0;
@@ -14,6 +14,7 @@ public class FinishedLevel : MonoBehaviour, GenericSave.IDataPersistence
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Hi");
             FinishLevel();
         }
     }
