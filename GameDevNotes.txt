@@ -3,8 +3,8 @@ Goals: Work on Boss AI = implement moves (final) + make moves do damage
 Audio System//And saving here with playerPreSet or something
 
 Polish:
-Finish Making Level functional
-GunFeel
+Finish Making Level
+GunFeel, sound
 GameOver, need to finish that
 End credit thing
 
@@ -503,11 +503,24 @@ Make the level actually worK... make the new enemy things actually work
 Add animation for gun pickup
 Add sounds
 
-
 ========
 01/17/2023
+-------- 
+Learning audacity
+
+========
+01/18/2023
 -------- 
 No cape on boss 2 for now
 
 Need to fix up boss 1 for polishing
 
+========
+01/19/2023
+-------- 
+Made camera work on boss1
+Need to work on audio implementation and boss 1 ai a little bit, boss need health bar in ui
+Add victory screen 
+Does my objectpool even do anything?
+
+How do i get my boss moving a bit.  Just pop in A*

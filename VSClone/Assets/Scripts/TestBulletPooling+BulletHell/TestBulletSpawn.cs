@@ -9,7 +9,7 @@ public class TestBulletSpawn : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("Destroy", 3f);
+        Invoke("Destroy", 12f);
     }
 
     // Start is called before the first frame update
