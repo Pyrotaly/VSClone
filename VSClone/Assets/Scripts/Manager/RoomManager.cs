@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    [SerializeField] private GameObject door;
-    [SerializeField] private GameObject doorDeathParticle;
+    [SerializeField] private GameObject objectToDestroy;
+    [SerializeField] private GameObject objectToSpawn;
     [SerializeField] private List<GameObject> enemyList;
     private int enemyCount;
 
@@ -31,8 +31,8 @@ public class RoomManager : MonoBehaviour
         if (enemyCount == 0)
         {
             // TODO: Make a sound on door destroyed
-            Instantiate(doorDeathParticle, door.transform.position, Quaternion.identity);
-            Destroy(door);
+            Instantiate(objectToSpawn, objectToDestroy.transform.position, Quaternion.identity);
+            Destroy(objectToDestroy);
             Destroy(this);
         }
     }

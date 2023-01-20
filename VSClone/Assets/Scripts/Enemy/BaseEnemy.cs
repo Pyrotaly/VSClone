@@ -37,10 +37,15 @@ public class BaseEnemy : MonoBehaviour, IDamageable
         StartCoroutine(TakenDamageFlash());
         if (Health <= 0)
         {
-            ActionsHolder.OnEnemyKilled?.Invoke();
-            Instantiate(deathParticle, transform.position, Quaternion.identity);
-            Destroy(gameObject, .005F);
+            OnDeath();
         }
+    }
+
+    public virtual void OnDeath()
+    {
+        ActionsHolder.OnEnemyKilled?.Invoke();
+        Instantiate(deathParticle, transform.position, Quaternion.identity);
+        Destroy(this.gameObject, .005F);
     }
 
     private IEnumerator TakenDamageFlash()

@@ -125,7 +125,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
 
         if (maxHealth <= 0)
         {
-            Debug.Log("Player Dead");
+            GameManager.Instance.GameOver();
         }
         else
         {

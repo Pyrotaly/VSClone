@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameState GameState;
+    [SerializeField] private GameObject gameOverScreen;
 
     public static event Action<GameState> OnGameStateChanged;
 
@@ -42,6 +43,11 @@ public class GameManager : MonoBehaviour
         }
 
         OnGameStateChanged?.Invoke(newState);
+    }
+
+    public void GameOver()
+    {
+        gameOverScreen.SetActive(true);
     }
 }
 

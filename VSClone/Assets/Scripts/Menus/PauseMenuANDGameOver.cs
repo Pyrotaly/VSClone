@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace GenericPauseMenu
 {
-    public class PauseMenu : MonoBehaviour
+    public class PauseMenuANDGameOver : MonoBehaviour
     {
         public static bool GameIsPaused;
         [SerializeField] private GameObject pauseMenuUI;
@@ -23,7 +23,7 @@ namespace GenericPauseMenu
             }
         }
 
-        private void Resume()
+        public void Resume()
         {
             pauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
@@ -40,7 +40,8 @@ namespace GenericPauseMenu
         // Loads the last checkpoint or save file
         public void Reload()
         {
-
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
 
         public void ReturnToMainMenu()

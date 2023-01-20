@@ -519,8 +519,21 @@ Need to fix up boss 1 for polishing
 01/19/2023
 -------- 
 Made camera work on boss1
+
 Need to work on audio implementation and boss 1 ai a little bit, boss need health bar in ui
-Add victory screen 
+
 Does my objectpool even do anything?
 
 How do i get my boss moving a bit.  Just pop in A*
+
+If one gun and reloading and trying to switch has weird result
+
+Work on boss moves:
+Add victory screen 
+
+========
+01/20/2023
+--------
+Game Manager kind of wack.
+
+Going to brute force and make player script directly find  gamemanger...

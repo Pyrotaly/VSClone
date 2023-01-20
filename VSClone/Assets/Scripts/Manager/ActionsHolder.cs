@@ -6,5 +6,6 @@ using UnityEngine;
 public static class ActionsHolder
 {
     public static Action OnEnemyKilled;
+    public static Action OnPlayerDeath;
 }
 

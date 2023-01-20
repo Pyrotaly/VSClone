@@ -5,7 +5,7 @@ using UnityEngine;
 public class HasSpawnItem : MonoBehaviour
 {
     [SerializeField] private GameObject spawnObject;
-    public void Spawn()
+    public void OnEnable()
     {
         Instantiate(spawnObject);
     }
