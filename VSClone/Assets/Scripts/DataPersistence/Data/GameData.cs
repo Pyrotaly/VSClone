@@ -20,8 +20,6 @@ namespace GenericSave
 
             levelCompleted.Add(1, true);
             levelCompleted.Add(2, false);
-            levelCompleted.Add(3, false);
-            levelCompleted.Add(4, false);
         }
     }
 }

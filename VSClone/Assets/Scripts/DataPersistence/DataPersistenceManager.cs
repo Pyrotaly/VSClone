@@ -49,6 +49,7 @@ namespace GenericSave
 
         public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            Debug.Log("HI");
             this.dataPersistenceObjects = FindAllDataPersistenceObjects();
             LoadGame();
         }
@@ -116,8 +117,6 @@ namespace GenericSave
         {
             IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>()
                 .OfType<IDataPersistence>();
-
-
 
             return new List<IDataPersistence>(dataPersistenceObjects);
         }

@@ -22,10 +22,7 @@ public class LevelButton : MonoBehaviour, GenericSave.IDataPersistence
     {
         Debug.Log("AGH");
 
-
         data.levelCompleted.TryGetValue(idNumber, out completed);
-
-        Debug.Log(completed);
 
         if (!completed)
         {

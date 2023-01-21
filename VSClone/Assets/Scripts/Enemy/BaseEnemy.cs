@@ -45,7 +45,7 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     {
         ActionsHolder.OnEnemyKilled?.Invoke();
         Instantiate(deathParticle, transform.position, Quaternion.identity);
-        Destroy(this.gameObject, .005F);
+        Destroy(gameObject, .005F);
     }
 
     private IEnumerator TakenDamageFlash()

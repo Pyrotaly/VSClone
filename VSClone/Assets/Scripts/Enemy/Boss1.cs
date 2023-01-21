@@ -9,6 +9,7 @@ public class Boss1 : BaseEnemy
     public override void OnDeath()
     {
         finishLevelTrigger.SetActive(true);
-        Destroy(this);
+
+        base.OnDeath();
     }
 }

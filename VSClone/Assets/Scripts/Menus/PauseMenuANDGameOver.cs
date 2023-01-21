@@ -10,6 +10,7 @@ namespace GenericPauseMenu
     {
         public static bool GameIsPaused;
         [SerializeField] private GameObject pauseMenuUI;
+        [SerializeField] private GenericMenuFader.SceneTransistionFader sceneFader;
 
         public void OnPause(InputAction.CallbackContext context)
         {
@@ -40,8 +41,9 @@ namespace GenericPauseMenu
         // Loads the last checkpoint or save file
         public void Reload()
         {
+            Time.timeScale = 1f;
             Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            sceneFader.FadeToLevel(scene.buildIndex);
         }
 
         public void ReturnToMainMenu()

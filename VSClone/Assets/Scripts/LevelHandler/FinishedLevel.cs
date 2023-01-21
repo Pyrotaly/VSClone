@@ -8,7 +8,6 @@ public class FinishedLevel : MonoBehaviour, IDataPersistence
     [SerializeField] private int currentLevelID = 0;
     [SerializeField] private int nextLevelID = 0;
     [SerializeField] private GenericMenuFader.SceneTransistionFader fader;
-    private bool levelCompleted = true;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,7 +26,7 @@ public class FinishedLevel : MonoBehaviour, IDataPersistence
 
     public void AfterFinishLevel()
     {
-        fader.FadeToLevel(nextLevelID);
+        fader.FadeToLevel(nextLevelID); 
     }
 
     public void LoadData(GameData data)
@@ -37,10 +36,12 @@ public class FinishedLevel : MonoBehaviour, IDataPersistence
 
     public void SaveData(ref GameData data)
     {
+        Debug.Log(currentLevelID);
         if (data.levelCompleted.ContainsKey(currentLevelID))
         {
+            Debug.Log("AGH2");
             data.levelCompleted.Remove(currentLevelID);
         }
-        data.levelCompleted.Add(currentLevelID, levelCompleted);
+        data.levelCompleted.Add(currentLevelID, true);
     }
 }

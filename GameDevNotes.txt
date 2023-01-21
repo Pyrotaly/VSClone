@@ -1,3 +1,5 @@
+TowerDefense where you defend againts Tower
+
 Goals: Work on Boss AI = implement moves (final) + make moves do damage
 
 Audio System//And saving here with playerPreSet or something
@@ -5,7 +7,6 @@ Audio System//And saving here with playerPreSet or something
 Polish:
 Finish Making Level
 GunFeel, sound
-GameOver, need to finish that
 End credit thing
 
 Future Notes: Probably add namespaces on bigger projects, Assemblies or something
@@ -534,6 +535,16 @@ Add victory screen
 ========
 01/20/2023
 --------
-Game Manager kind of wack.
+Reload game work
+Boss does not disappear.  NOW HE DOES
 
-Going to brute force and make player script directly find  gamemanger...
+https://www.youtube.com/watch?v=XBRpdDeMmCk Party at end credit
+
+========
+01/21/2023
+--------
+I need to know why saving not work...
+
+For some reason, setting the gameobject set active false will not work with saving.  It just doesn't work.
+
+Bandaid level design fix.  Make it so the door on the bottom opens once player kills boss to the level finish

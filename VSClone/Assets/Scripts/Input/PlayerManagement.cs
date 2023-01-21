@@ -179,9 +179,8 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
         moveDirection.x = RawMovementInput.x;
         moveDirection.y = RawMovementInput.y;
 
-        //Debug.Log(moveDirection.x);
+        //Debug.Log(moveDirection.y); 
 
-        //Temporary Flip Manager  https://www.youtube.com/watch?v=Cr-j7EoM8bg go here for better flip 
         //Make face right
         if (RawMovementInput.x > 0.6 && !facingRight)
         {
