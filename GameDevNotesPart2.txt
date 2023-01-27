@@ -1,0 +1,44 @@
+Need to do: The menu options stuff need to use the transition fader thing so it works and everything... 
+
+Stuff: Blood, audio
+
+========
+01/26/2023
+--------
+
+Make this a sellable product...
+
+Goal: 3 or so hours of gameplay and sell for like 5 bucks.  Super small game
+Cool bosses, the original 4 boss idea...
+
+All bosses: Miniboss, First bullet hell boss, flood, the clone
+
+ENEMY TYPES: 
+}Walk and touch player and deal damage (Vampire survivor), 
+}enemy stuck on walls that shoot, 
+}enemies that move and shoot (but keep distance), 
+}enemies that spawn enemies (walk randomly?).  			
+}REUSED ENEMIES: The mini enemy in BOSS 1 (just beefy enemy), 
+}BOSS 3 weaker version (reuse)
+
+My new enemy:
+}Chase player like a dog
+}Charging player
+}EnemyShoot but with a shotgun
+}EnemyShoot but rapid fire 
+
+TOTAL ENEMIES = 6
+
+Dungeon based room like Issac of Binding//// I guess like Enter the gungeon...
+
+} When making room, make it using the Krita file with the Leve1Area1 
+
+========
+01/27/2023
+--------
+Using TestingLevel krita document to make level
+
+}Made all the enemies on paper.  Total is like 10, 8 different types with one have three different variations...
+
+
+
