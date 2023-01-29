@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class BaseEnemy : MonoBehaviour, IDamageable
 {
@@ -8,11 +9,18 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     [SerializeField] private int touchDamage = 20;
     private SpriteRenderer spriteRenderer;
     [SerializeField] private GameObject deathParticle;
+    //private AIPath aiPath;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        //aiPath = GetComponent<AIPath>();
     }
+
+    //private void Start()
+    //{
+    //    aiPath.maxSpeed = 20;
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)      //Knock player?
     {
