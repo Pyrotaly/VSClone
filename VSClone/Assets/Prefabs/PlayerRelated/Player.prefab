@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 1859046846679026180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.35, y: -35.7, z: 1}
-  m_LocalScale: {x: 0.5152333, y: 0.5152333, z: 0.5152333}
+  m_LocalScale: {x: 1.3855886, y: 1.3855886, z: 1.3855886}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2812208018819318773}
@@ -353,18 +353,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.23554969, y: -0.21592253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 38.399998, y: 21.599998}
+    oldSize: {x: 38.4, y: 21.6}
     newSize: {x: 38.399998, y: 21.599998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.766624, y: 3.1199498}
   m_EdgeRadius: 0
 --- !u!114 &1859046846628522639
 MonoBehaviour:
@@ -393,7 +393,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 64
-  walkSpeed: 5
+  walkSpeed: 22
   raycastTransform: {fileID: 0}
   baseStepSpeed: 0.5
   crouchStepMultiplier: 1.5
@@ -417,7 +417,7 @@ MonoBehaviour:
   IsDashing: 0
   CanDash: 0
   trailRenderer: {fileID: 0}
-  dashStrength: 17
+  dashStrength: 75.3
   dashDuration: 0.22
   dashCooldown: 0.5
   layerInts: 03000000090000000b000000

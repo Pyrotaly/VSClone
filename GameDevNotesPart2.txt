@@ -44,7 +44,7 @@ Using TestingLevel krita document to make level
 }Made all the enemies on paper.  Total is like 10, 8 different types with one have three different variations...
 
 }Work on game mechanics ideas:
-Portal, speed boosters, slow ground
+Portal, speed boosters, slow ground, traps
 More enemy spawning like doom or enter the gungeon...
 }Level Design
 
@@ -56,3 +56,13 @@ Door
 Ignore the blood remain on the ground cause not that important...
 
 }To make spped booster or slowerer, it the same script but I think to make it work, need to make it a generic that get the same variable of movespeed and adjust it
+
+
+========
+01/29/2023
+--------
+Goal: Make the basic game feel
+}Gun feel
+}Enemy Death
+}Enemy shooting animations: https://youtu.be/2YdTpHlyw1s?t=485 hell is other demons reference
+Player will look at the projectile more than the enemy shooting, only for bosses they would look at the player
