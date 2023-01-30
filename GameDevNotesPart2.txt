@@ -66,3 +66,5 @@ Goal: Make the basic game feel
 }Enemy Death
 }Enemy shooting animations: https://youtu.be/2YdTpHlyw1s?t=485 hell is other demons reference
 Player will look at the projectile more than the enemy shooting, only for bosses they would look at the player
+
+Make camera fit in area like hollow knight...
