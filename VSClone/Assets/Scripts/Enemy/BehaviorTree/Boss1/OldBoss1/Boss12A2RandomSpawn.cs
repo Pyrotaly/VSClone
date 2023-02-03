@@ -5,9 +5,9 @@ using BehaviorDesigner.Runtime.Tasks;
 
 
 //Boss move that spawns missiles or enemies
-[TaskCategory("Boss1")]
+[TaskCategory("BossX")]
 [TaskDescription("SpawnAttack")]
-public class Boss12A2 : EnemyAction
+public class Boss12A2RandomSpawn : EnemyAction
 {
     [SerializeField] private HasRandomSpawner[] spawners; // = new HasRandomSpawner[4];
 

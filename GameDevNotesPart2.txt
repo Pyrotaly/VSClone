@@ -68,3 +68,36 @@ Goal: Make the basic game feel
 Player will look at the projectile more than the enemy shooting, only for bosses they would look at the player
 
 Make camera fit in area like hollow knight...
+
+========
+01/30/2023
+--------
+}Fixed camera
+}Enemy death okay
+}Enemy shooting animation...
+https://youtu.be/2YdTpHlyw1s?t=485 hell is other demons reference
+
+}Make the mini boss, but not the art, just the AI...
+
+========
+02/01/2023
+--------
+working on AI
+(to be fair, i did a lot of school work today and made half of the remaining week and the entire week next week free)
+
+========
+02/02/2023
+--------
+FinishingBoss1
+
+Do I need bullet pool thing
+note, i made the bullet shoot spawn thing negative because of the shotgun thing did not work for some reason, it keep shooting opposite way
+
+Only thing left is the Unstoppablecharge attack which is already done, just need a visisble game thing
+
+========
+02/03/2023
+--------
+Now get to be super artsy and stuff
+
+Work with demo audio, gun feel?

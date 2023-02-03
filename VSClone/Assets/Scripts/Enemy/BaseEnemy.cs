@@ -1,41 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 
 public class BaseEnemy : MonoBehaviour, IDamageable
 {
     [SerializeField] private int Health = 400;
     [SerializeField] private int touchDamage = 20;
-    private SpriteRenderer spriteRenderer;
     [SerializeField] private GameObject deathParticle;
-    //private AIPath aiPath;
+    private SpriteRenderer spriteRenderer;
+
+    // For bosses that check if they collided with player, cannot think of smarter way to deal handle this so far...
+    public bool collidedWithPlayer { get; private set; }
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        //aiPath = GetComponent<AIPath>();
     }
 
-    //private void Start()
+    private void OnCollisionEnter2D(Collision2D collision)      //Knock player?  // TODO: not sure if there is a bug if colliding on enemy
+    {
+        if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable i))
+        {
+            i.TakeDamage(touchDamage);
+            collidedWithPlayer = true;
+            Invoke("setCollidedFalse", 0.2f);
+        }
+    }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
     //{
-    //    aiPath.maxSpeed = 20;
+    //    if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable i))
+    //    {
+    //        i.TakeDamage(touchDamage);
+    //    }
     //}
 
-    private void OnCollisionEnter2D(Collision2D collision)      //Knock player?
+    private void setCollidedFalse()
     {
-        if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable i))
-        {
-            i.TakeDamage(touchDamage);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable i))
-        {
-            i.TakeDamage(touchDamage);
-        }
+        collidedWithPlayer = false;
     }
 
     public void TakeDamage(int damageAmount)    //Add in particle effects and stuff

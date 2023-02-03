@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using BehaviorDesigner.Runtime.Tasks;
 
-[TaskCategory("Boss1")]
-public class Boss1A1 : EnemyAction
+[TaskCategory("BossX")]
+public class Boss1CircleAttack : EnemyAction
 {
     [SerializeField] private int bulletsAmount = 10;
 

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using BehaviorDesigner.Runtime.Tasks;
 
-[TaskCategory("Boss1")]
-public class Boss1A3 : EnemyAction
+[TaskCategory("BossX")]
+public class Boss1SpiralAttack : EnemyAction
 {
     private float angle = 0f;
 

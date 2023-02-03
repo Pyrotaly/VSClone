@@ -4,16 +4,17 @@ using UnityEngine;
 using BehaviorDesigner.Runtime.Tasks;
 
 [TaskCategory("Boss1")]
-public class Boss1A2 : EnemyAction
+public class Boss1ShotGun : EnemyAction
 {
     [SerializeField] private int bulletsAmount = 10;
-
     [SerializeField] private float startAngle = 90f, endAngle = 270f;
+    [SerializeField] private HandleSpawnRotation hSR;
 
     private const float radius = 1f;
 
     public override void OnStart()
     {
+
         Fire();
     }
 
@@ -21,9 +22,11 @@ public class Boss1A2 : EnemyAction
     {
         return TaskStatus.Success;
     }
-
+        
     private void Fire()
     {
+        hSR.MangeRotation();
+
         float angleStep = (endAngle - startAngle) / bulletsAmount;
         float angle = startAngle;
 
@@ -32,15 +35,15 @@ public class Boss1A2 : EnemyAction
             //float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
             //float bulDirY = transform.position.x + Mathf.Cos((angle * Mathf.PI) / 180f);
 
-            float bulDirX = this.transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180) * radius;
-            float bulDirY = this.transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180) * radius;
+            float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180) * radius;
+            float bulDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180) * radius;
 
             Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
-            Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+            Vector2 bulDir = -1 * (bulMoveVector - hSR.transform.position).normalized;          //Multiplied by -1 because it go opposite way
 
             GameObject bul = TestBulletPool.bulletPoolInstance.GetBullet();
-            bul.transform.position = transform.position;
-            bul.transform.rotation = transform.rotation;
+            bul.transform.position = hSR.transform.position;
+            bul.transform.rotation = hSR.transform.rotation;
             bul.SetActive(true);
             bul.GetComponent<TestBulletSpawn>().SetMoveDirection(bulDir);
 
