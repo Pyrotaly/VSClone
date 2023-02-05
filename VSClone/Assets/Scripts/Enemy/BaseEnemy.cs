@@ -53,6 +53,7 @@ public class BaseEnemy : MonoBehaviour, IDamageable
 
     public virtual void OnDeath()
     {
+        // TODO: play death sound...
         ActionsHolder.OnEnemyKilled?.Invoke();
         Instantiate(deathParticle, transform.position, Quaternion.identity);
         Destroy(gameObject, .005F);

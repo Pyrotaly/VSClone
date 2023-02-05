@@ -101,3 +101,11 @@ Only thing left is the Unstoppablecharge attack which is already done, just need
 Now get to be super artsy and stuff
 
 Work with demo audio, gun feel?
+Do i need audio manager....
+
+https://www.youtube.com/watch?v=tEsuLTpz_DU: Tarque
+https://www.youtube.com/watch?v=6OT43pvUyfY: Brackey sound manager
+
+========
+02/04/2023
+--------
