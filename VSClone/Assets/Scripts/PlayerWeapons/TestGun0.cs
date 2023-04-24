@@ -7,10 +7,11 @@ public class TestGun0 : Gun
     protected override void OnGunReload()
     {
         //Add gun reload effect here
+        AudioManager.Instance.PlaySFX("Reload");
     }
 
     protected override void OnGunShot()
     {
-        //Add gun shot effect here
+        AudioManager.Instance.PlaySFX("PistolShot");
     }
 }

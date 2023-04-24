@@ -12,7 +12,7 @@ namespace GenericSettingsMenu
         [SerializeField] private TMPro.TMP_Dropdown resolutionDropdown;
         private Resolution[] resolutions;
 
-        [SerializeField] private Slider volumeSlider;
+        [SerializeField] private Slider musicVolumeSlider, sfxVolumeSlider;
 
         const string resValue = "resolutionvalue";
 
@@ -46,9 +46,14 @@ namespace GenericSettingsMenu
             PlayerPrefs.SetInt("resValue", resolutionDropdown.value);
         }
 
-        public void SetVolume(float volume)
+        public void SetMusicVolume(float volume)
         {
+            AudioManager.Instance.AdjustMusicVolume(musicVolumeSlider.value);
+        }
 
+        public void SetSFXVolume(float volume)
+        {
+            AudioManager.Instance.AdjustMusicVolume(sfxVolumeSlider.value);
         }
 
         public void SetQuality(int qualityIndex)

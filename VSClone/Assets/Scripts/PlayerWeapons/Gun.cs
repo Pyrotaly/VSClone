@@ -165,6 +165,7 @@ public abstract class Gun : MonoBehaviour
 
     private IEnumerator Reload()
     {
+        OnGunReload();
         if (currentAmmo == maxAmmo)
         {
             yield return null;

@@ -1,9 +1,19 @@
+ Goals: Music, sound effect, Complete the things below
+
 Need to do: 
 }The menu options stuff need to use the transition fader thing so it works and everything... 
 }Make gun art, enemy art
 
 Stuff: audio, Scene 2 with demo boss: all bosses too: have a door that open only after boss die
 	Pick up gun animation thingy, NEED TO DO ART AGAIN...
+
+
+Game Hierarchy Notes:
+My game is not structured with a game manager, instead all of the things typically in a game manager are seperated in different scripts
+ - pausing is in a PauseANDGAMEOVEr script located beneath Canvas prefab
+ - Scene transitioner is a gameobject that triggers a scene transition AND has a fade in and out effect located in CANVAS
+ - There is an Audio Manager as the only manager in the manager prefab object
+
 
 ========
 01/26/2023
@@ -117,3 +127,127 @@ https://www.youtube.com/watch?v=VoqUt0EzOTk guitar tone...
 https://www.youtube.com/watch?v=Gts2ewQ_DO0 free guitar VST things
 
 Trying to figure out, what kind of music is in my game, i feel like there wouldn't be music since...
+
+========
+03/02/2023
+--------
+Break due to chaos, interviews for internships
+
+Goals: Check on top
+
+========
+03/05/2023
+--------
+Worked on two episodes of cakewalk tutorial
+NOTE: if no headphone detection, plug in headphone, restart cakewalk and then go to edit preferences to solo headphone audio output
+
+========
+03/06/2023
+--------
+
+6/16 of cakewalk
+
+========
+03/07/2023
+--------
+
+8/16 cake walk...
+
+========
+03/08/2023
+--------
+
+YOUTUBE VIDEO TO CHECK: Empty Multiplayer Maps Are Unsettling, Kenopsia...
+
+speedruning cakewalk learning...
+
+========
+03/09/2023
+--------
+
+Gonna try to cakewalk now
+
+========
+03/10/2023
+--------
+listening to bass and drum to get idea of music
+
+========
+03/11/2023
+--------
+
+learning to cakewalk drums and figuring out tools
+
+
+========
+03/19/2023
+--------
+So Vital Synth, can get more free wavetables
+
+
+========
+03/26/2023
+--------
+Have basis of game making thing.  Maybe this summer, I can make a 15 minute demo...
+
+Need to make audio manager things...
+
+----------------
+BIG BREAK CAUSE TRYING TO GET AN INTERNSHIP
+----------------
+
+========
+04/21/2023
+--------
+Starting again, audio manager
+
+========
+04/22/2023
+--------
+Audio mixer manager things
+think my audio will be done with prefabs and not with scripts like CodeMonkey
+
+What kind of audio is in games...
+music, sfx, dialogue	//I think thats all there is necessary for my game, probably no dialogue
+https://www.youtube.com/watch?v=rdX7nhH6jdM this my audio manager
+
+Goal: try to implement the most basic shooting and reloading sounds ever and music sounds and make it work with my script TODAY
+
+NOTE: Need to save audio in the saving thing i programmed
+
+The manager is gonna hold all audio and be the source of music and player sound effects, since player always like main part of game
+- enemies and other things will have their own audio sources so it just get the music from the manager and plays it from their own audio source
+
+Nvm, just make it all from the main house
+
+I achieved my goal almost
+
+Gotta save it and adjust things from setting somehow
+
+========
+04/23/2023
+--------
+Finished being able to adjust volume, but only in the start screen since the options menu there works but not in first game 
+GOALS: Need to do menu stuff thingy in the header notes, idk what that means
+Make audio options save with either player prefs or my save system
+
+RN: trying to save volume things with player prefs...
+I think I did it
+
+RN: Need to fix game hierarchy, make things work between scenes, what do all scenes ect.
+
+BUG: (Maybe) I don't think bool if want full screen or not is saved any where...
+
+Note: I think I do not need CheckPointManager to be a singleton, it just needs to just have one in every level but it can be different
+Why do i even have a checkpoint system...
+
+I don't think my game has a checkpoint system, when fighting boss, will spawn player at boss again (main bosses though)
+
+Fixed up game hierarchy, it is not in one game manager but instead is over several scripts
+
+GOAL: FIx the header note and MAKE A GAME
+
+BUg: hearing no sound because by default, game sets audio to player prefs but currenlty player pref has it = 0
+========
+04/23/2023
+--------
