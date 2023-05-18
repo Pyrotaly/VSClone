@@ -248,6 +248,48 @@ Fixed up game hierarchy, it is not in one game manager but instead is over sever
 GOAL: FIx the header note and MAKE A GAME
 
 BUg: hearing no sound because by default, game sets audio to player prefs but currenlty player pref has it = 0
+
 ========
-04/23/2023
+04/24/2023
 --------
+Starting music
+
+========
+04/25/2023
+--------
+More music
+
+
+!!!!!!!!!!!!
+UPDATES BETWEEN ARE IN WPS OFFICE EXCEL NOTES:
+!!!!!!!!!!!!
+
+========
+05/13/2023
+--------
+https://www.youtube.com/watch?v=xbptpOqQ828 this really good to refer back on music production since i do not understand anything rn
+
+
+========
+05/17/2023
+--------
+Let try to polish game with one basic enemy and one boss (that mini boss)
+
+Here's what i am thinking:
+
+Art:
+Mini Boss, Basic Enemy, Make Gun like 20 minutes until dawn rotation, make enemy death thing (maybe make it the same as door explosion)
+
+Sound:
+Mini boss attacks, basic enemy walking, gun sounds, gun pick up sound, gun reload, gun shoot, door explosion, enemy death sounds...
+
+Game mechanics:
+Mini Boss attacks
+- mini gun, charge attack, run really fast attack
+- half hp
+--run really fast and shot gun attacks
+--spiral attack of death after going into the center
+
+4 attacks in total...
+
+20 minute till dawn reference: https://www.youtube.com/watch?v=HL8jo7bqRg0
