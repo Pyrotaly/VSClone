@@ -293,3 +293,15 @@ Mini Boss attacks
 4 attacks in total...
 
 20 minute till dawn reference: https://www.youtube.com/watch?v=HL8jo7bqRg0
+
+
+
+========
+05/20/2023
+--------
+I googled this: unity changing resolution effects camera size
+https://forum.unity.com/threads/how-to-change-size-of-the-camera-depending-on-the-aspect-ratio.972234/
+
+
+
+
