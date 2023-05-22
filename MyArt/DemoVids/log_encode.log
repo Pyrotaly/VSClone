@@ -12,7 +12,7 @@ ffmpeg version N-101191-g51a9f487ae Copyright (c) 2000-2021 the FFmpeg developer
 Splitting the commandline.
 Reading option '-v' ... matched as option 'v' (set logging level) with argument 'debug'.
 Reading option '-nostdin' ... matched as option 'stdin' (enable or disable interaction on standard input) with argument 0.
-Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/temp/KritaFFmpegProgress.EZfHcM'.
+Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/temp/KritaFFmpegProgress.QfMktr'.
 Reading option '-r' ... matched as option 'r' (set frame rate (Hz value, fraction or abbreviation)) with argument '24'.
 Reading option '-start_number' ... matched as AVOption 'start_number' with argument '2'.
 Reading option '-i' ... matched as input url with argument 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle%04d.png'.
@@ -21,98 +21,95 @@ Reading option '-preset' ... matched as AVOption 'preset' with argument 'medium'
 Reading option '-profile:v' ... matched as option 'profile' (set profile) with argument 'baseline'.
 Reading option '-pix_fmt' ... matched as option 'pix_fmt' (set pixel format) with argument 'yuv420p'.
 Reading option '-y' ... matched as option 'y' (overwrite output files) with argument '1'.
-Reading option 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.mp4' ... matched as output url.
+Reading option 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.1.mp4' ... matched as output url.
 Finished splitting the commandline.
 Parsing a group of options: global .
 Applying option v (set logging level) with argument debug.
 Applying option nostdin (enable or disable interaction on standard input) with argument 0.
-Applying option progress (write program-readable progress information) with argument C:/temp/KritaFFmpegProgress.EZfHcM.
-[file @ 000001c64b2ae340] Setting default whitelist 'file,crypto,data'
+Applying option progress (write program-readable progress information) with argument C:/temp/KritaFFmpegProgress.QfMktr.
+[file @ 00000152aa2de340] Setting default whitelist 'file,crypto,data'
 Applying option y (overwrite output files) with argument 1.
 Successfully parsed a group of options.
 Parsing a group of options: input url E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle%04d.png.
 Applying option r (set frame rate (Hz value, fraction or abbreviation)) with argument 24.
 Successfully parsed a group of options.
 Opening an input file: E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle%04d.png.
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0002.png' for reading
-[file @ 000001c6494ba2c0] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c64b2f9000] Statistics: 168501 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0003.png' for reading
-[file @ 000001c64b322580] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c64b322640] Statistics: 168501 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0004.png' for reading
-[file @ 000001c64b322600] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494bd500] Statistics: 200441 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0005.png' for reading
-[file @ 000001c64b322600] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494bd6c0] Statistics: 200441 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0006.png' for reading
-[file @ 000001c64b322600] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494bd880] Statistics: 166694 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0007.png' for reading
-[file @ 000001c64b322600] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494bda40] Statistics: 166694 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0008.png' for reading
-[file @ 000001c64b322600] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494bdc00] Statistics: 167309 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0009.png' for reading
-[file @ 000001c64b322600] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494be5c0] Statistics: 167309 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0010.png' for reading
-[file @ 000001c6494be5c0] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494be6c0] Statistics: 200998 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0011.png' for reading
-[file @ 000001c6494be5c0] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494be6c0] Statistics: 200998 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0012.png' for reading
-[file @ 000001c6494be680] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494be780] Statistics: 166947 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0013.png' for reading
-[file @ 000001c6494be680] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494be780] Statistics: 166947 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0014.png' for reading
-[file @ 000001c6494be680] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494be780] Statistics: 168495 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0015.png' for reading
-[file @ 000001c6494be680] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494be780] Statistics: 168495 bytes read, 0 seeks
-[image2 @ 000001c64b2ee680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0016.png' for reading
-[file @ 000001c6494be680] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 000001c6494be780] Statistics: 168495 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0002.png' for reading
+[file @ 00000152a879a2c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152aa329000] Statistics: 190601 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0003.png' for reading
+[file @ 00000152aa357bc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152aa357cc0] Statistics: 190601 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0004.png' for reading
+[file @ 00000152aa357c80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152ac35ea40] Statistics: 208272 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0005.png' for reading
+[file @ 00000152aa357c80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152ac391a00] Statistics: 208272 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0006.png' for reading
+[file @ 00000152aa357c80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152ac3c4a00] Statistics: 197519 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0007.png' for reading
+[file @ 00000152aa357c80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152a879a340] Statistics: 197519 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0008.png' for reading
+[file @ 00000152aa357c80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152a879a500] Statistics: 200850 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0009.png' for reading
+[file @ 00000152aa357c80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152a879aec0] Statistics: 200850 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0010.png' for reading
+[file @ 00000152a879aec0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152a879afc0] Statistics: 208601 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0011.png' for reading
+[file @ 00000152a879aec0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152a879afc0] Statistics: 208601 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0012.png' for reading
+[file @ 00000152a879af80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152a879b080] Statistics: 200131 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0013.png' for reading
+[file @ 00000152a879af80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152a879b080] Statistics: 200131 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0014.png' for reading
+[file @ 00000152a879af80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152a879b080] Statistics: 193037 bytes read, 0 seeks
+[image2 @ 00000152aa31e680] Opening 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle0015.png' for reading
+[file @ 00000152a879af80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000152a879b080] Statistics: 193037 bytes read, 0 seeks
 Input #0, image2, from 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle%04d.png':
-  Duration: 00:00:00.60, start: 0.000000, bitrate: N/A
-  Stream #0:0, 15, 1/25: Video: png, 1 reference frame, rgba(pc), 3840x2160 [SAR 7874:7874 DAR 16:9], 0/1, 25 fps, 25 tbr, 25 tbn, 25 tbc
+  Duration: 00:00:00.56, start: 0.000000, bitrate: N/A
+  Stream #0:0, 14, 1/25: Video: png, 1 reference frame, rgba(pc), 3840x2160 [SAR 7874:7874 DAR 16:9], 0/1, 25 fps, 25 tbr, 25 tbn, 25 tbc
 Successfully opened the file.
-Parsing a group of options: output url E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.mp4.
+Parsing a group of options: output url E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.1.mp4.
 Applying option profile:v (set profile) with argument baseline.
 Applying option pix_fmt (set pixel format) with argument yuv420p.
 Successfully parsed a group of options.
-Opening an output file: E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.mp4.
-[file @ 000001c64d65ba80] Setting default whitelist 'file,crypto,data'
+Opening an output file: E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.1.mp4.
+[file @ 00000152ac5bfec0] Setting default whitelist 'file,crypto,data'
 Successfully opened the file.
 detected 12 logical cores
 Stream mapping:
   Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
 cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
     Last message repeated 12 times
-[graph 0 input from stream 0:0 @ 000001c6494bdb80] Setting 'video_size' to value '3840x2160'
-[graph 0 input from stream 0:0 @ 000001c6494bdb80] Setting 'pix_fmt' to value '26'
-[graph 0 input from stream 0:0 @ 000001c6494bdb80] Setting 'time_base' to value '1/24'
-[graph 0 input from stream 0:0 @ 000001c6494bdb80] Setting 'pixel_aspect' to value '7874/7874'
-[graph 0 input from stream 0:0 @ 000001c6494bdb80] Setting 'frame_rate' to value '24/1'
-[graph 0 input from stream 0:0 @ 000001c6494bdb80] w:3840 h:2160 pixfmt:rgba tb:1/24 fr:24/1 sar:7874/7874
-[format @ 000001c6494bd640] Setting 'pix_fmts' to value 'yuv420p'
-[auto_scaler_0 @ 000001c64d6f8540] Setting 'flags' to value 'bicubic'
-[auto_scaler_0 @ 000001c64d6f8540] w:iw h:ih flags:'bicubic' interl:0
-[format @ 000001c6494bd640] auto-inserting filter 'auto_scaler_0' between the filter 'Parsed_null_0' and the filter 'format'
-[AVFilterGraph @ 000001c64d59b040] query_formats: 4 queried, 2 merged, 1 already done, 0 delayed
-[auto_scaler_0 @ 000001c64d6f8540] w:3840 h:2160 fmt:rgba sar:7874/7874 -> w:3840 h:2160 fmt:yuv420p sar:1/1 flags:0x4
-[libx264 @ 000001c64d5c6040] using mv_range_thread = 56
-[libx264 @ 000001c64d5c6040] using SAR=1/1
-[libx264 @ 000001c64d5c6040] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000001c64d5c6040] profile Constrained Baseline, level 5.1, 4:2:0, 8-bit
-[libx264 @ 000001c64d5c6040] 264 - core 161 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=0 ref=3 deblock=1:0:0 analyse=0x1:0x111 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=18 lookahead_threads=3 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=250 keyint_min=24 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.mp4':
+[graph 0 input from stream 0:0 @ 00000152ac3919c0] Setting 'video_size' to value '3840x2160'
+[graph 0 input from stream 0:0 @ 00000152ac3919c0] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 0:0 @ 00000152ac3919c0] Setting 'time_base' to value '1/24'
+[graph 0 input from stream 0:0 @ 00000152ac3919c0] Setting 'pixel_aspect' to value '7874/7874'
+[graph 0 input from stream 0:0 @ 00000152ac3919c0] Setting 'frame_rate' to value '24/1'
+[graph 0 input from stream 0:0 @ 00000152ac3919c0] w:3840 h:2160 pixfmt:rgba tb:1/24 fr:24/1 sar:7874/7874
+[format @ 00000152a879a480] Setting 'pix_fmts' to value 'yuv420p'
+[auto_scaler_0 @ 00000152aa37eb40] Setting 'flags' to value 'bicubic'
+[auto_scaler_0 @ 00000152aa37eb40] w:iw h:ih flags:'bicubic' interl:0
+[format @ 00000152a879a480] auto-inserting filter 'auto_scaler_0' between the filter 'Parsed_null_0' and the filter 'format'
+[AVFilterGraph @ 00000152a879df80] query_formats: 4 queried, 2 merged, 1 already done, 0 delayed
+[auto_scaler_0 @ 00000152aa37eb40] w:3840 h:2160 fmt:rgba sar:7874/7874 -> w:3840 h:2160 fmt:yuv420p sar:1/1 flags:0x4
+[libx264 @ 00000152a8799c80] using mv_range_thread = 56
+[libx264 @ 00000152a8799c80] using SAR=1/1
+[libx264 @ 00000152a8799c80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000152a8799c80] profile Constrained Baseline, level 5.1, 4:2:0, 8-bit
+[libx264 @ 00000152a8799c80] 264 - core 161 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=0 ref=3 deblock=1:0:0 analyse=0x1:0x111 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=18 lookahead_threads=3 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=250 keyint_min=24 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.1.mp4':
   Metadata:
     encoder         : Lavf58.68.100
   Stream #0:0, 0, 1/12288: Video: h264, 1 reference frame (avc1 / 0x31637661), yuv420p(tv, progressive), 3840x2160 (0x0) [SAR 1:1 DAR 16:9], 0/1, q=2-31, 24 fps, 12288 tbn
@@ -122,44 +119,43 @@ Output #0, mp4, to 'E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2
       cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
 Clipping frame in rate conversion by 0.000008
 frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
-    Last message repeated 13 times
-frame=   15 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
-    Last message repeated 1 times
-[out_0_0 @ 000001c6494bd800] EOF on sink link out_0_0:default.
+    Last message repeated 11 times
+frame=   13 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 2 times
+[out_0_0 @ 00000152ac35e9c0] EOF on sink link out_0_0:default.
 No more output streams to write to, finishing.
-[libx264 @ 000001c64d5c6040] frame=   0 QP=10.39 NAL=3 Slice:I Poc:0   I:32400 P:0    SKIP:0    size=26910 bytes
-[libx264 @ 000001c64d5c6040] frame=   1 QP=10.69 NAL=2 Slice:P Poc:2   I:8    P:22   SKIP:32370 size=97 bytes
-[libx264 @ 000001c64d5c6040] frame=   2 QP=13.76 NAL=2 Slice:P Poc:4   I:581  P:316  SKIP:31503 size=5983 bytes
-[libx264 @ 000001c64d5c6040] frame=   3 QP=9.81 NAL=2 Slice:P Poc:6   I:30   P:15   SKIP:32355 size=129 bytes
-[libx264 @ 000001c64d5c6040] frame=   4 QP=17.27 NAL=2 Slice:P Poc:8   I:518  P:310  SKIP:31572 size=2598 bytes
-[libx264 @ 000001c64d5c6040] frame=   5 QP=9.05 NAL=2 Slice:P Poc:10  I:1    P:9    SKIP:32390 size=50 bytes
-[libx264 @ 000001c64d5c6040] frame=   6 QP=18.03 NAL=2 Slice:P Poc:12  I:100  P:279  SKIP:32021 size=1597 bytes
-[libx264 @ 000001c64d5c6040] frame=   7 QP=11.63 NAL=2 Slice:P Poc:14  I:5    P:9    SKIP:32386 size=69 bytes
-[libx264 @ 000001c64d5c6040] frame=   8 QP=19.10 NAL=2 Slice:P Poc:16  I:731  P:115  SKIP:31554 size=6483 bytes
-[libx264 @ 000001c64d5c6040] frame=   9 QP=10.21 NAL=2 Slice:P Poc:18  I:15   P:18   SKIP:32367 size=103 bytes
-[libx264 @ 000001c64d5c6040] frame=  10 QP=18.62 NAL=2 Slice:P Poc:20  I:543  P:213  SKIP:31644 size=2846 bytes
-[libx264 @ 000001c64d5c6040] frame=  11 QP=9.28 NAL=2 Slice:P Poc:22  I:4    P:14   SKIP:32382 size=68 bytes
-[libx264 @ 000001c64d5c6040] frame=  12 QP=18.02 NAL=2 Slice:P Poc:24  I:129  P:302  SKIP:31969 size=2201 bytes
-[libx264 @ 000001c64d5c6040] frame=  13 QP=12.00 NAL=2 Slice:P Poc:26  I:2    P:17   SKIP:32381 size=71 bytes
-[libx264 @ 000001c64d5c6040] frame=  14 QP=13.00 NAL=2 Slice:P Poc:28  I:0    P:3    SKIP:32397 size=23 bytes
-frame=   15 fps=0.0 q=-1.0 Lsize=      50kB time=00:00:00.58 bitrate= 696.0kbits/s speed=0.623x    
-[AVIOContext @ 000001c64b2ee500] Statistics: 0 seeks, 3 writeouts
-video:49kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 1.833758%
+[libx264 @ 00000152a8799c80] frame=   0 QP=10.61 NAL=3 Slice:I Poc:0   I:32400 P:0    SKIP:0    size=31659 bytes
+[libx264 @ 00000152a8799c80] frame=   1 QP=7.16 NAL=2 Slice:P Poc:2   I:27   P:17   SKIP:32356 size=162 bytes
+[libx264 @ 00000152a8799c80] frame=   2 QP=20.75 NAL=2 Slice:P Poc:4   I:151  P:514  SKIP:31735 size=5331 bytes
+[libx264 @ 00000152a8799c80] frame=   3 QP=6.82 NAL=2 Slice:P Poc:6   I:23   P:18   SKIP:32359 size=137 bytes
+[libx264 @ 00000152a8799c80] frame=   4 QP=11.87 NAL=2 Slice:P Poc:8   I:111  P:418  SKIP:31871 size=5748 bytes
+[libx264 @ 00000152a8799c80] frame=   5 QP=7.23 NAL=2 Slice:P Poc:10  I:23   P:19   SKIP:32358 size=141 bytes
+[libx264 @ 00000152a8799c80] frame=   6 QP=22.12 NAL=2 Slice:P Poc:12  I:34   P:472  SKIP:31894 size=2961 bytes
+[libx264 @ 00000152a8799c80] frame=   7 QP=7.42 NAL=2 Slice:P Poc:14  I:18   P:11   SKIP:32371 size=113 bytes
+[libx264 @ 00000152a8799c80] frame=   8 QP=15.53 NAL=2 Slice:P Poc:16  I:584  P:177  SKIP:31639 size=8059 bytes
+[libx264 @ 00000152a8799c80] frame=   9 QP=8.32 NAL=2 Slice:P Poc:18  I:14   P:23   SKIP:32363 size=129 bytes
+[libx264 @ 00000152a8799c80] frame=  10 QP=22.28 NAL=2 Slice:P Poc:20  I:114  P:434  SKIP:31852 size=5836 bytes
+[libx264 @ 00000152a8799c80] frame=  11 QP=9.03 NAL=2 Slice:P Poc:22  I:23   P:17   SKIP:32360 size=148 bytes
+[libx264 @ 00000152a8799c80] frame=  12 QP=22.43 NAL=2 Slice:P Poc:24  I:176  P:359  SKIP:31865 size=4055 bytes
+[libx264 @ 00000152a8799c80] frame=  13 QP=13.33 NAL=2 Slice:P Poc:26  I:26   P:12   SKIP:32362 size=131 bytes
+frame=   14 fps= 13 q=-1.0 Lsize=      65kB time=00:00:00.54 bitrate= 976.6kbits/s speed=0.517x    
+[AVIOContext @ 00000152aa31e500] Statistics: 0 seeks, 3 writeouts
+video:64kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 1.395171%
 Input file #0 (E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerWaddle%04d.png):
-  Input stream #0:0 (video): 15 packets read (2647265 bytes); 15 frames decoded; 
-  Total: 15 packets (2647265 bytes) demuxed
-Output file #0 (E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.mp4):
-  Output stream #0:0 (video): 15 frames encoded; 15 packets muxed (49843 bytes); 
-  Total: 15 packets (49843 bytes) muxed
-15 frames successfully decoded, 0 decoding errors
-[AVIOContext @ 000001c64d69bbc0] Statistics: 2 seeks, 4 writeouts
-[libx264 @ 000001c64d5c6040] frame I:1     Avg QP:10.39  size: 26910
-[libx264 @ 000001c64d5c6040] frame P:14    Avg QP:13.61  size:  1594
-[libx264 @ 000001c64d5c6040] mb I  I16..4: 99.2%  0.0%  0.8%
-[libx264 @ 000001c64d5c6040] mb P  I16..4:  0.4%  0.0%  0.2%  P16..4:  0.2%  0.1%  0.0%  0.0%  0.0%    skip:99.1%
-[libx264 @ 000001c64d5c6040] coded y,uvDC,uvAC intra: 1.4% 0.0% 0.0% inter: 0.0% 0.0% 0.0%
-[libx264 @ 000001c64d5c6040] i16 v,h,dc,p: 99%  0%  1%  0%
-[libx264 @ 000001c64d5c6040] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 38% 22% 27%  3%  2%  2%  2%  2%  1%
-[libx264 @ 000001c64d5c6040] i8c dc,h,v,p: 100%  0%  0%  0%
-[libx264 @ 000001c64d5c6040] ref P L0: 73.6% 11.0% 15.4%
-[libx264 @ 000001c64d5c6040] kb/s:630.12
+  Input stream #0:0 (video): 14 packets read (2798022 bytes); 14 frames decoded; 
+  Total: 14 packets (2798022 bytes) demuxed
+Output file #0 (E:/UnityStuff/GitHub/VSClone/MyArt/DemoVids/PlayerAnimation2.1.mp4):
+  Output stream #0:0 (video): 14 frames encoded; 14 packets muxed (65225 bytes); 
+  Total: 14 packets (65225 bytes) muxed
+14 frames successfully decoded, 0 decoding errors
+[AVIOContext @ 00000152ac600000] Statistics: 2 seeks, 4 writeouts
+[libx264 @ 00000152a8799c80] frame I:1     Avg QP:10.61  size: 31659
+[libx264 @ 00000152a8799c80] frame P:13    Avg QP:13.41  size:  2535
+[libx264 @ 00000152a8799c80] mb I  I16..4: 98.9%  0.0%  1.1%
+[libx264 @ 00000152a8799c80] mb P  I16..4:  0.2%  0.0%  0.1%  P16..4:  0.3%  0.2%  0.1%  0.0%  0.0%    skip:99.1%
+[libx264 @ 00000152a8799c80] coded y,uvDC,uvAC intra: 1.4% 0.0% 0.0% inter: 0.1% 0.0% 0.0%
+[libx264 @ 00000152a8799c80] i16 v,h,dc,p: 98%  1%  1%  0%
+[libx264 @ 00000152a8799c80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 39% 24% 25%  3%  3%  2%  2%  1%  1%
+[libx264 @ 00000152a8799c80] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 00000152a8799c80] ref P L0: 70.0% 15.5% 14.5%
+[libx264 @ 00000152a8799c80] kb/s:886.08
