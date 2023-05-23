@@ -299,9 +299,19 @@ Mini Boss attacks
 ========
 05/20/2023
 --------
+
+FIXING CAMERA RESOLUTION CHANGING SIZE THING
 I googled this: unity changing resolution effects camera size
 https://forum.unity.com/threads/how-to-change-size-of-the-camera-depending-on-the-aspect-ratio.972234/
 
 
+========
+05/22/2023
+--------
+Need to redesign levels to make it like more room like enter the gungeon
 
+Changing PlayerSIze: 1.454219 to 1.120025
 
+Have to animate player in 8 directions, should be easy though
+
+Today I: Made enemy designs, animated range enemy and working on player
