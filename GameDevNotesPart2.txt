@@ -315,3 +315,22 @@ Changing PlayerSIze: 1.454219 to 1.120025
 Have to animate player in 8 directions, should be easy though
 
 Today I: Made enemy designs, animated range enemy and working on player
+
+========
+05/23/2023
+-------- 
+i interned today
+
+========
+05/24/2023
+--------
+Player Animation will only have up, bottom right, bottom left, down (down kinda looks like middle but will check), no top corners
+
+??=   What is this
+
+
+
+
+
+
+
