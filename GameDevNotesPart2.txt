@@ -330,7 +330,7 @@ Player Animation will only have up, bottom right, bottom left, down (down kinda 
 
 
 
-
-
+This is maybe new tutorial on how to handle aspect ratioooo, maybe just focus that on second game then...
+https://www.youtube.com/watch?v=hXU-ZJb6GHw
 
 
