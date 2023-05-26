@@ -39,7 +39,6 @@ public class FinishedLevel : MonoBehaviour, IDataPersistence
         Debug.Log(currentLevelID);
         if (data.levelCompleted.ContainsKey(currentLevelID))
         {
-            Debug.Log("AGH2");
             data.levelCompleted.Remove(currentLevelID);
         }
         data.levelCompleted.Add(currentLevelID, true);

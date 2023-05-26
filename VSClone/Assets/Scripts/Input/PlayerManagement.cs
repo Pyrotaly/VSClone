@@ -22,7 +22,7 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
     [SerializeField] private int numberOfFlashes = 3;
     private SpriteRenderer spriteRenderer;
 
-    // TODO: Direction Management WIP
+    // TODO: Direction Management WIP  UPDATE: 5/25 will remove this, try to handle gun rotation like 20 minutes until dawn game
     private Vector2 facingDirection = Vector2.down;     //Temporarily, player will be always facing down in terms of code
     private float facingDirectionLength = 0.75f;        //How far infront of player raycast will shoot to check for IInteractable
     private bool facingRight = true;
@@ -68,8 +68,8 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
     private void Update()
     {
         //Animation Management
-        animator.SetFloat("Vertical", RawMovementInput.y);
-        animator.SetFloat("Horizontal", Mathf.Abs(RawMovementInput.x));
+        animator.SetFloat("VerticalInput", RawMovementInput.y);
+        animator.SetFloat("HorizontalInput", RawMovementInput.x);        //  absolute value...Mathf.Abs(RawMovementInput.x));
 
         animator.SetBool("Move", Move);
 
@@ -182,15 +182,15 @@ public class PlayerManagement : MonoBehaviour, IDamageable, GenericSave.IDataPer
         //Debug.Log(moveDirection.y); 
 
         //Make face right
-        if (RawMovementInput.x > 0.6 && !facingRight)
-        {
-            Flip();
-        }
-        //Make face left
-        if (RawMovementInput.x < -0.6 && facingRight)
-        {
-            Flip();
-        }
+        //if (RawMovementInput.x > 0.6 && !facingRight)
+        //{
+        //    Flip();
+        //}
+        ////Make face left
+        //if (RawMovementInput.x < -0.6 && facingRight)
+        //{
+        //    Flip();
+        //}
     }
 
     public void OnDashInput(InputAction.CallbackContext context)

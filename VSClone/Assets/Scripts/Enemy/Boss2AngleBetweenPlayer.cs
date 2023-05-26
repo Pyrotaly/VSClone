@@ -6,13 +6,13 @@ using UnityEngine;
 public class Boss2AngleBetweenPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    private Animator anim;
+    [SerializeField] private Animator anim;
     private float angle;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim ??= GetComponent<Animator>();
     }
 
     // Update is called once per frame
