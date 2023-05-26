@@ -378,3 +378,19 @@ knew just to outline my game and not the background
 --------
 I will just make boss just big version of the shooty guy
 
+Okay so new plan:
+
+Need to 'code' AI now and level design, i have all the enemie art done, 
+Things to do below:
+-Handle enemy death...
+-Code Enemy AI
+-Level Design
+-Level Transition
+-Make boss
+0: Health Bar on Top or whatever, manage zooming out with image not being messed up or make it like enter the gungeon
+
+-Music
+-Sound effects
+
+
+
