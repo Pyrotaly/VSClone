@@ -371,3 +371,10 @@ Finished up player, maybe add in a dash thing....
 
 In my second game, also figure out how art works, like i think player when i add box collider 2d the unity game
 knew just to outline my game and not the background
+
+
+========
+05/26/2023
+--------
+I will just make boss just big version of the shooty guy
+
