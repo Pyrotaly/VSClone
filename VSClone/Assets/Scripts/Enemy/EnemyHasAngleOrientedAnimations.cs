@@ -11,7 +11,7 @@ public class EnemyHasAngleOrientedAnimations : MonoBehaviour
 
     private void Start()
     {
-        anim ??= GetComponent<Animator>();
+        anim = anim != null ? anim : GetComponent<Animator>();
     }
 
     private void Update()
@@ -21,7 +21,6 @@ public class EnemyHasAngleOrientedAnimations : MonoBehaviour
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         if (angle < 0) angle += 360f;
-        Debug.Log(angle);
 
         // Set the "PlayerAngle" parameter in the Animator
         anim.SetFloat("PlayerAngle", angle);

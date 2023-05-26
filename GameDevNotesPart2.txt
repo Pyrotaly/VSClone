@@ -385,12 +385,11 @@ Things to do below:
 -Handle enemy death...
 -Code Enemy AI
 -Level Design
--Level Transition
+-Level Transition??
 -Make boss
 0: Health Bar on Top or whatever, manage zooming out with image not being messed up or make it like enter the gungeon
 
 -Music
 -Sound effects
-
 
 
